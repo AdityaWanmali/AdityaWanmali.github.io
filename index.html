@@ -8,507 +8,1066 @@
     />
     <meta
       name="description"
-      content="Portfolio of Aditya Wanmali, an MBA graduate and IT professional in Munich focused on project management, business analysis, digital transformation, and operations."
+      content="Aditya Wanmali's project-delivery portfolio: 3.5 years of technical delivery experience, 30+ system cutovers and migrations, Agile delivery, and stakeholder management."
     />
-    <meta name="theme-color" content="#f5f7f3" />
-    <meta property="og:title" content="Aditya Wanmali | Portfolio" />
+    <meta name="theme-color" content="#f4f6f2" />
+    <meta property="og:title" content="Aditya Wanmali | Project Delivery Workspace" />
     <meta
       property="og:description"
-      content="MBA graduate and IT professional connecting technology, operations, and people."
+      content="Technical delivery experience. Project management direction."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://adityawanmali.github.io/" />
-    <title>Aditya Wanmali | IT &amp; Project Management Portfolio</title>
+    <title>Aditya Wanmali | Project Delivery Workspace</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer="defer"></script>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content" data-i18n="skipLink">Skip to main content</a>
 
-    <header class="site-header" id="site-header">
+    <header class="command-bar" id="site-header">
       <div class="scroll-progress" aria-hidden="true"></div>
-      <div class="nav-shell">
-        <a class="brand" href="#home" aria-label="Aditya Wanmali, back to home">
-          <span class="brand-mark" aria-hidden="true">AW</span>
-          <span class="brand-name">Aditya Wanmali</span>
+
+      <a
+        class="command-brand"
+        href="#home"
+        aria-label="Aditya Wanmali, overview"
+        data-i18n-aria-label="brandLabel"
+      >
+        <span class="command-mark" aria-hidden="true">AW</span>
+        <span class="command-brand-copy">
+          <strong data-i18n="workspaceName">Delivery Workspace</strong>
+          <small>PORTFOLIO / 2026</small>
+        </span>
+      </a>
+
+      <div class="command-context" aria-label="Target role" data-i18n-aria-label="targetRoleLabel">
+        <span data-i18n="targetLabel">Target</span>
+        <strong data-i18n="targetRole">IT Project Management</strong>
+      </div>
+
+      <div class="command-actions">
+        <div
+          class="language-switch"
+          role="group"
+          aria-label="Select language"
+          data-i18n-aria-label="languageSelectorLabel"
+        >
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="de" aria-pressed="false">DE</button>
+        </div>
+
+        <a
+          class="command-cv"
+          href="assets/documents/Aditya-Wanmali-CV.pdf"
+          download="Aditya-Wanmali-CV.pdf"
+          aria-label="Download Aditya Wanmali's CV as a PDF"
+          data-i18n-aria-label="downloadCvLabel"
+        >
+          <span data-i18n="downloadCv">Download CV</span>
+          <span aria-hidden="true">↓</span>
         </a>
 
         <button
           class="menu-toggle"
           type="button"
           aria-expanded="false"
-          aria-controls="primary-navigation"
-          aria-label="Open navigation menu"
+          aria-controls="workspace-sidebar"
+          aria-label="Open portfolio navigation"
+          data-i18n-aria-label="openNavigation"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
-
-        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
-          <a href="#certifications">Certifications</a>
-          <a class="nav-contact" href="#contact">Contact</a>
-        </nav>
       </div>
     </header>
 
-    <main id="main-content">
-      <section class="hero section" id="home" aria-labelledby="hero-title">
-        <div class="hero-backdrop" aria-hidden="true"></div>
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow"><span class="status-dot"></span> Munich, Germany · Exploring new opportunities</p>
-            <p class="hero-role">MBA graduate &amp; IT professional</p>
-            <h1 id="hero-title">
-              Connecting <span class="title-accent">technology,</span> operations, and people.
-            </h1>
-            <p class="hero-intro">
-              I bring together software delivery, IT operations, project coordination, and
-              cross-cultural collaboration to help teams turn complex work into clear progress.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#experience">View my experience <span aria-hidden="true">↗</span></a>
-              <a
-                class="button button-cv"
-                href="assets/documents/Aditya-Wanmali-CV.pdf"
-                download="Aditya-Wanmali-CV.pdf"
-                aria-label="Download Aditya Wanmali's CV as a PDF"
-              >
-                Download CV <span aria-hidden="true">↓</span>
-              </a>
-              <a class="button button-secondary" href="#contact">Get in touch</a>
-            </div>
-            <dl class="hero-facts" aria-label="Professional overview">
-              <div>
-                <dt>Base</dt>
-                <dd>Munich, Germany</dd>
-              </div>
-              <div>
-                <dt>Background</dt>
-                <dd>Business + technology</dd>
-              </div>
-              <div>
-                <dt>Perspective</dt>
-                <dd>Cross-cultural teams</dd>
-              </div>
-            </dl>
+    <div class="workspace-shell">
+      <aside
+        class="workspace-sidebar"
+        id="workspace-sidebar"
+        aria-label="Portfolio workspace"
+        data-i18n-aria-label="workspaceNavLabel"
+      >
+        <div class="profile-rail">
+          <div class="profile-monogram" aria-hidden="true">
+            <span>AW</span>
+            <i></i>
           </div>
-
-          <aside class="hero-card reveal" aria-label="Current professional focus">
-            <div class="hero-card-topline">
-              <span>Current focus</span>
-              <span class="availability">Germany</span>
-            </div>
-            <ul class="focus-list">
-              <li><span>01</span> IT Project Management</li>
-              <li><span>02</span> Business Analysis</li>
-              <li><span>03</span> Digital Transformation</li>
-              <li><span>04</span> Process Improvement</li>
-            </ul>
-            <div class="hero-card-footer">
-              <p>Experience across international organisations and client environments</p>
-              <div class="company-list" role="list" aria-label="Selected organisations">
-                <span role="listitem">Capgemini</span>
-                <span role="listitem">Mercedes-Benz R&amp;D</span>
-                <span role="listitem">Infosys</span>
-                <span role="listitem">Roche</span>
-              </div>
-            </div>
-          </aside>
+          <div>
+            <p class="rail-label" data-i18n="workspaceOwner">Workspace owner</p>
+            <p class="rail-name">Aditya Wanmali</p>
+            <p class="rail-role" data-i18n="railRole">Project Management &amp; Technical Delivery</p>
+          </div>
         </div>
-      </section>
 
-      <section class="section" id="about" aria-labelledby="about-title">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-kicker">01 · About me</p>
-            <h2 id="about-title">A practical bridge between business and technology.</h2>
+        <div class="rail-status">
+          <span class="status-signal" aria-hidden="true"></span>
+          <div>
+            <small data-i18n="currentStatus">Current status</small>
+            <strong data-i18n="statusValue">Open to PM opportunities</strong>
           </div>
-          <div class="about-grid">
-            <div class="about-copy reveal">
-              <p class="lead">
-                I am an MBA graduate and IT professional based in Munich, with a background
-                spanning mechanical engineering, software development, IT operations, and
-                project coordination.
+        </div>
+
+        <nav class="workspace-nav" aria-label="Portfolio sections" data-i18n-aria-label="sectionNavLabel">
+          <a href="#home">
+            <span>00</span>
+            <strong data-i18n="navOverview">Overview</strong>
+          </a>
+          <a href="#about">
+            <span>01</span>
+            <strong data-i18n="navBrief">Project Brief</strong>
+          </a>
+          <a href="#experience">
+            <span>02</span>
+            <strong data-i18n="navWorkstreams">Experience</strong>
+          </a>
+          <a href="#personal-project">
+            <span>03</span>
+            <strong data-i18n="navPersonalProject">Personal Project</strong>
+          </a>
+          <a href="#projects">
+            <span>04</span>
+            <strong data-i18n="navDeliverables">Work Projects</strong>
+          </a>
+          <a href="#skills">
+            <span>05</span>
+            <strong data-i18n="navCapabilities">Capabilities</strong>
+          </a>
+          <a href="#education">
+            <span>06</span>
+            <strong data-i18n="navRoadmap">Career Roadmap</strong>
+          </a>
+          <a href="#certifications">
+            <span>07</span>
+            <strong data-i18n="navCredentials">Credentials</strong>
+          </a>
+          <a href="#contact">
+            <span>08</span>
+            <strong data-i18n="navContact">Kickoff</strong>
+          </a>
+        </nav>
+
+        <div class="rail-footer">
+          <div>
+            <small data-i18n="basedIn">Based in</small>
+            <span data-i18n="locationValue">Munich, Germany</span>
+          </div>
+          <div>
+            <small data-i18n="languagesLabel">Languages</small>
+            <span data-i18n="languageSummary">English · German A2</span>
+          </div>
+          <a href="mailto:wanmaliaditya@gmail.com">wanmaliaditya@gmail.com</a>
+        </div>
+      </aside>
+
+      <button
+        class="drawer-backdrop"
+        type="button"
+        aria-label="Close portfolio navigation"
+        data-i18n-aria-label="closeNavigation"
+        hidden="hidden"
+      ></button>
+
+      <main class="workspace-main" id="main-content" tabindex="-1">
+        <section class="workspace-section overview-section" id="home" aria-labelledby="overview-title">
+          <div class="section-commandline reveal">
+            <p><span>WORKSPACE</span> / AW-CAREER-01</p>
+            <span class="phase-chip"><i></i><span data-i18n="phaseTransition">CAREER TRANSITION</span></span>
+          </div>
+
+          <div class="overview-grid">
+            <div class="overview-copy reveal">
+              <p class="section-code" data-i18n="overviewCode">00 · Overview</p>
+              <h1 id="overview-title" data-i18n="heroTitle">
+                Technical depth. Project delivery focus.
+              </h1>
+              <p class="overview-lead" data-i18n="heroLead">
+                MBA graduate with 3.5 years of experience at Capgemini, delivering technical
+                projects for Mercedes-Benz R&amp;D across global teams.
               </p>
-              <p>
-                Working in international environments has shaped how I approach delivery: make
-                the goal clear, bring the right people together, and create processes that help
-                teams move forward. I am especially interested in roles where structured
-                problem-solving and thoughtful communication have equal weight.
-              </p>
+              <div class="overview-actions">
+                <a class="action action-primary" href="#experience">
+                  <span data-i18n="exploreEvidence">Explore delivery evidence</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  class="action action-secondary"
+                  href="assets/documents/Aditya-Wanmali-CV.pdf"
+                  download="Aditya-Wanmali-CV.pdf"
+                >
+                  <span data-i18n="downloadCv">Download CV</span>
+                  <span aria-hidden="true">↓</span>
+                </a>
+                <a class="action action-quiet" href="#contact" data-i18n="startConversation">
+                  Start a conversation
+                </a>
+              </div>
             </div>
-            <div class="focus-grid reveal" role="list" aria-label="Areas of interest">
-              <span role="listitem">IT Project Management</span>
-              <span role="listitem">Business Analysis</span>
-              <span role="listitem">Digital Transformation</span>
-              <span role="listitem">Process Improvement</span>
-              <span role="listitem">Knowledge Management</span>
-              <span role="listitem">Operations Coordination</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="section section-tinted" id="experience" aria-labelledby="experience-title">
-        <div class="container">
-          <div class="section-heading split-heading reveal">
-            <div>
-              <p class="section-kicker">02 · Professional experience</p>
-              <h2 id="experience-title">Selected work and engagements.</h2>
-            </div>
-            <p>
-              Experience across enterprise IT, automotive R&amp;D, software delivery, and
-              knowledge-intensive environments.
-            </p>
-          </div>
-
-          <div class="timeline">
-            <article class="experience-card reveal">
-              <div class="experience-marker" aria-hidden="true">01</div>
-              <div class="experience-main">
-                <p class="card-label">Enterprise IT delivery</p>
-                <h3>Capgemini</h3>
-                <p>
-                  Selected experience within an international enterprise environment,
-                  contributing to a career spanning software delivery, IT operations, and
-                  project coordination.
-                </p>
+            <aside class="project-snapshot reveal" aria-label="Career project snapshot" data-i18n-aria-label="snapshotLabel">
+              <div class="snapshot-heading">
+                <span>PROJECT CARD</span>
+                <strong>AW-PM-01</strong>
               </div>
-              <ul class="tag-list" aria-label="Focus areas at Capgemini">
-                <li>IT delivery</li>
-                <li>IT operations</li>
-                <li>Project coordination</li>
-              </ul>
-            </article>
-
-            <article class="experience-card reveal">
-              <div class="experience-marker" aria-hidden="true">02</div>
-              <div class="experience-main">
-                <p class="card-label">Automotive technology</p>
-                <h3>Mercedes-Benz R&amp;D</h3>
-                <p>
-                  Contributed to system-integration and cutover activities within an automotive
-                  research-and-development environment.
-                </p>
-              </div>
-              <ul class="tag-list" aria-label="Focus areas at Mercedes-Benz R&amp;D">
-                <li>System integration</li>
-                <li>Cutover</li>
-                <li>Automotive R&amp;D</li>
-              </ul>
-            </article>
-
-            <article class="experience-card reveal">
-              <div class="experience-marker" aria-hidden="true">03</div>
-              <div class="experience-main">
-                <p class="card-label">Software &amp; operations</p>
-                <h3>Infosys</h3>
-                <p>
-                  Selected experience within an international IT environment, contributing to
-                  a background that combines software development and IT operations.
-                </p>
-              </div>
-              <ul class="tag-list" aria-label="Focus areas at Infosys">
-                <li>Software development</li>
-                <li>IT operations</li>
-                <li>International environment</li>
-              </ul>
-            </article>
-
-            <article class="experience-card reveal">
-              <div class="experience-marker" aria-hidden="true">04</div>
-              <div class="experience-main">
-                <p class="card-label">Knowledge enablement</p>
-                <h3>Roche</h3>
-                <p>
-                  Contributed to selected knowledge-management activities within an
-                  international life-sciences environment.
-                </p>
-              </div>
-              <ul class="tag-list" aria-label="Focus areas at Roche">
-                <li>Knowledge management</li>
-                <li>Knowledge sharing</li>
-                <li>International environment</li>
-              </ul>
-            </article>
-          </div>
-          <p class="experience-note reveal">
-            Organisations shown represent selected professional and client environments.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-kicker">03 · Projects</p>
-            <h2 id="projects-title">Turning research and delivery into practical outcomes.</h2>
-          </div>
-
-          <div class="project-grid">
-            <article class="project-card project-featured reveal">
-              <div class="project-number" aria-hidden="true">01</div>
-              <div>
-                <p class="card-label">MBA thesis · Cross-cultural leadership</p>
-                <h3>Leadership behaviours in India–Germany IT operations teams</h3>
-                <p>
-                  MBA research examining leadership behaviours in India–Germany IT operations
-                  teams.
-                </p>
-                <ul class="tag-list">
-                  <li>MBA research</li>
-                  <li>Leadership</li>
-                  <li>Cross-cultural teams</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-number" aria-hidden="true">02</div>
-              <p class="card-label">Enterprise delivery</p>
-              <h3>System integration &amp; cutover</h3>
-              <p>
-                Selected system-integration and cutover activities within the Mercedes-Benz
-                R&amp;D environment.
-              </p>
-              <ul class="tag-list">
-                <li>Integration</li>
-                <li>Planning</li>
-                <li>Cutover</li>
-              </ul>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-number" aria-hidden="true">03</div>
-              <p class="card-label">Knowledge enablement</p>
-              <h3>Knowledge-management activities</h3>
-              <p>
-                Selected knowledge-management activities within the Roche environment.
-              </p>
-              <ul class="tag-list">
-                <li>Knowledge sharing</li>
-                <li>Documentation</li>
-                <li>Continuity</li>
-              </ul>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-number" aria-hidden="true">04</div>
-              <p class="card-label">Independent work</p>
-              <h3>Technical &amp; project-management practice</h3>
-              <p>
-                Personal technical and project-management projects developed through
-                independent practice.
-              </p>
-              <ul class="tag-list">
-                <li>Planning</li>
-                <li>Problem-solving</li>
-                <li>Technology</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-dark" id="skills" aria-labelledby="skills-title">
-        <div class="container">
-          <div class="section-heading split-heading reveal">
-            <div>
-              <p class="section-kicker">04 · Skills</p>
-              <h2 id="skills-title">A balanced delivery toolkit.</h2>
-            </div>
-            <p>
-              Business context, technical fluency, and calm coordination for complex,
-              cross-functional work.
-            </p>
-          </div>
-
-          <div class="skills-grid">
-            <article class="skill-card reveal">
-              <span class="skill-index" aria-hidden="true">A</span>
-              <h3>Project &amp; Business</h3>
-              <ul>
-                <li>Project coordination</li>
-                <li>Business analysis</li>
-                <li>Process improvement</li>
-                <li>Digital transformation</li>
-                <li>IT project management</li>
-                <li>Operations coordination</li>
-              </ul>
-            </article>
-
-            <article class="skill-card reveal">
-              <span class="skill-index" aria-hidden="true">B</span>
-              <h3>Technology &amp; Operations</h3>
-              <ul>
-                <li>Software development</li>
-                <li>IT operations</li>
-                <li>System integration</li>
-                <li>Cutover coordination</li>
-                <li>Mechanical engineering</li>
-                <li>Technical projects</li>
-              </ul>
-            </article>
-
-            <article class="skill-card reveal">
-              <span class="skill-index" aria-hidden="true">C</span>
-              <h3>People &amp; Knowledge</h3>
-              <ul>
-                <li>Cross-cultural teamwork</li>
-                <li>Knowledge management</li>
-                <li>International teamwork</li>
-                <li>India–Germany research</li>
-                <li>Project collaboration</li>
-                <li>Knowledge sharing</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="education" aria-labelledby="education-title">
-        <div class="container education-layout">
-          <div class="section-heading reveal">
-            <p class="section-kicker">05 · Education</p>
-            <h2 id="education-title">Business perspective, engineering foundation.</h2>
-            <p>
-              An interdisciplinary background that supports both strategic thinking and
-              hands-on problem-solving.
-            </p>
-          </div>
-
-          <div class="education-list">
-            <article class="education-card reveal">
-              <span class="education-icon" aria-hidden="true">MBA</span>
-              <div>
-                <p class="card-label">Postgraduate education</p>
-                <h3>Master of Business Administration</h3>
-                <p>
-                  Postgraduate business education supporting an interdisciplinary approach to
-                  technology, projects, and operations.
-                </p>
-              </div>
-            </article>
-
-            <article class="education-card reveal">
-              <span class="education-icon" aria-hidden="true">ENG</span>
-              <div>
-                <p class="card-label">Technical foundation</p>
-                <h3>Mechanical engineering foundation</h3>
-                <p>
-                  A technical background that complements later experience in software,
-                  operations, and business.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-tinted" id="certifications" aria-labelledby="certifications-title">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-kicker">06 · Certifications</p>
-            <h2 id="certifications-title">Continuous professional development.</h2>
-          </div>
-
-          <div class="certification-layout">
-            <article class="certificate-card reveal">
-              <div class="certificate-heading">
-                <span class="certificate-mark" aria-hidden="true">G</span>
+              <dl>
                 <div>
-                  <p class="card-label">Google · 2026</p>
-                  <h3>Google Project Management Professional Certificate</h3>
+                  <dt data-i18n="objectiveLabel">Objective</dt>
+                  <dd data-i18n="objectiveValue">Transition into IT project management</dd>
                 </div>
+                <div>
+                  <dt data-i18n="experienceLabel">Experience</dt>
+                  <dd data-i18n="experienceValue">3.5 years · Technical delivery</dd>
+                </div>
+                <div>
+                  <dt data-i18n="deliveryModelLabel">Delivery model</dt>
+                  <dd data-i18n="deliveryModelValue">Agile · Scrum · SAFe</dd>
+                </div>
+                <div>
+                  <dt data-i18n="locationLabel">Location</dt>
+                  <dd data-i18n="locationValue">Munich, Germany</dd>
+                </div>
+              </dl>
+              <div class="snapshot-footer">
+                <span data-i18n="focusLabel">Focus</span>
+                <strong data-i18n="focusValue">Planning · Risk · Stakeholders · Delivery</strong>
               </div>
-              <p>
-                Practical training across project initiation, planning, execution, Agile
-                delivery, and real-world project application.
-              </p>
-              <a
-                class="text-link"
-                href="https://www.linkedin.com/in/aditya-wanmali/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View professional profile <span aria-hidden="true">↗</span>
-              </a>
-            </article>
-
-            <aside class="learning-card reveal" aria-label="Selected certificate coursework">
-              <p class="card-label">Selected coursework</p>
-              <ul>
-                <li>Project Initiation</li>
-                <li>Project Planning</li>
-                <li>Project Execution</li>
-                <li>Agile Project Management</li>
-                <li>Applied Capstone</li>
-              </ul>
             </aside>
           </div>
-        </div>
-      </section>
 
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="container contact-panel reveal">
-          <div class="contact-copy">
-            <p class="section-kicker">07 · Contact</p>
-            <h2 id="contact-title">Let’s build meaningful progress.</h2>
-            <p>
-              I am interested in opportunities across IT project management, business
-              analysis, digital transformation, process improvement, and operations in
-              Germany. You can reach me through LinkedIn or explore my work on GitHub.
+          <dl class="metric-grid reveal" aria-label="Verified delivery metrics" data-i18n-aria-label="metricsLabel">
+            <div>
+              <dt data-i18n="experienceNumber">3.5</dt>
+              <dd data-i18n="metricExperience">Years at Capgemini</dd>
+              <small>01/2022 — 06/2025</small>
+            </div>
+            <div>
+              <dt>30+</dt>
+              <dd data-i18n="metricCutovers">Cutovers &amp; migrations</dd>
+              <small data-i18n="metricCutoversMeta">Global delivery</small>
+            </div>
+            <div>
+              <dt>10K+</dt>
+              <dd data-i18n="metricTransactions">Transactions per day</dd>
+              <small>REST API DELIVERY</small>
+            </div>
+            <div>
+              <dt>≈30%</dt>
+              <dd data-i18n="metricResponse">Response-time reduction</dd>
+              <small data-i18n="metricResponseMeta">Performance improvement</small>
+            </div>
+          </dl>
+        </section>
+
+        <section class="workspace-section" id="about" aria-labelledby="brief-title">
+          <header class="workspace-section-header reveal">
+            <div>
+              <p class="section-code" data-i18n="briefCode">01 · Project Brief</p>
+              <h2 id="brief-title" data-i18n="briefTitle">The transition charter.</h2>
+            </div>
+            <p data-i18n="briefIntro">
+              Building on technical delivery experience to move into roles where planning,
+              stakeholder alignment, risk management, and execution are the primary mandate.
             </p>
-          </div>
+          </header>
 
-          <div class="contact-links" role="group" aria-label="Contact links">
-            <a
-              class="contact-link"
-              href="https://www.linkedin.com/in/aditya-wanmali/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>
-                <small>Professional network</small>
-                LinkedIn
-              </span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a
-              class="contact-link"
-              href="https://github.com/AdityaWanmali"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>
-                <small>Code &amp; projects</small>
-                GitHub
-              </span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <div class="contact-location">
-              <small>Based in</small>
-              <span>Munich, Germany</span>
+          <div class="charter-layout">
+            <article class="charter-card reveal">
+              <div class="card-commandline">
+                <span>CHARTER / 01</span>
+                <span data-i18n="approvedEvidence">CV-VERIFIED</span>
+              </div>
+              <p class="charter-statement" data-i18n="charterStatement">
+                I combine hands-on software knowledge with day-to-day delivery ownership. That
+                lets me translate technical constraints into clear plans, risks, decisions, and
+                stakeholder updates.
+              </p>
+              <dl class="charter-register">
+                <div>
+                  <dt data-i18n="foundationLabel">Foundation</dt>
+                  <dd data-i18n="foundationValue">Mechanical engineering + software delivery</dd>
+                </div>
+                <div>
+                  <dt data-i18n="managementLayerLabel">Management layer</dt>
+                  <dd data-i18n="managementLayerValue">MBA, General Management</dd>
+                </div>
+                <div>
+                  <dt data-i18n="directionLabel">Direction</dt>
+                  <dd data-i18n="directionValue">IT project management &amp; Agile delivery</dd>
+                </div>
+              </dl>
+            </article>
+
+            <div class="operating-principles reveal">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3 data-i18n="principleAlignTitle">Align</h3>
+                  <p data-i18n="principleAlignText">
+                    Turn stakeholder requirements into user stories, technical specifications,
+                    milestones, and accountable actions.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span>02</span>
+                <div>
+                  <h3 data-i18n="principleDeriskTitle">De-risk</h3>
+                  <p data-i18n="principleDeriskText">
+                    Surface dependencies and blockers early across engineering, security,
+                    deployment, and regional teams.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <h3 data-i18n="principleDeliverTitle">Deliver</h3>
+                  <p data-i18n="principleDeliverText">
+                    Coordinate readiness, release, smoke testing, follow-up, and status reporting
+                    through completion.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="current-year">2026</span> Aditya Wanmali</p>
-        <p>Designed for clarity, built with care.</p>
-        <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
-      </div>
-    </footer>
+        <section class="workspace-section section-subtle" id="experience" aria-labelledby="workstreams-title">
+          <header class="workspace-section-header reveal">
+            <div>
+              <p class="section-code" data-i18n="workstreamsCode">02 · Professional Experience</p>
+              <h2 id="workstreams-title" data-i18n="workstreamsTitle">Professional delivery record.</h2>
+            </div>
+            <p data-i18n="workstreamsIntro">
+              One role spanning project coordination, global cutover delivery, and hands-on
+              software engineering for Mercedes-Benz R&amp;D.
+            </p>
+          </header>
+
+          <article class="role-record reveal" aria-label="Capgemini role record" data-i18n-aria-label="roleRecordLabel">
+            <div>
+              <small data-i18n="organisationLabel">Organisation</small>
+              <strong>Capgemini</strong>
+              <span data-i18n="capgeminiLocation">Bangalore, India</span>
+            </div>
+            <div>
+              <small data-i18n="roleLabel">Role</small>
+              <strong data-i18n="roleValue">Associate Consultant</strong>
+              <span data-i18n="roleDiscipline">Project Management &amp; Technical Delivery</span>
+            </div>
+            <div>
+              <small data-i18n="clientLabel">Client</small>
+              <strong>Mercedes-Benz R&amp;D India</strong>
+              <span data-i18n="globalCollaboration">Global collaboration</span>
+            </div>
+            <div>
+              <small data-i18n="periodLabel">Period</small>
+              <strong>01/2022 — 06/2025</strong>
+              <span><span data-i18n="experienceNumber">3.5</span> <span data-i18n="years">years</span></span>
+            </div>
+          </article>
+
+          <div class="workstream-list">
+            <details class="workstream-card reveal" open="open">
+              <summary>
+                <span class="workstream-index">WS-01</span>
+                <span class="workstream-summary-copy">
+                  <small data-i18n="projectDelivery">Project delivery</small>
+                  <strong>Global Dealer-Order Data Migration</strong>
+                  <span data-i18n="workstreamOneSummary">
+                    Sole delivery lead coordinating Germany and regional teams worldwide.
+                  </span>
+                </span>
+                <span class="delivery-status" data-i18n="deliveredStatus">Delivered</span>
+                <span class="details-control">
+                  <span data-i18n="evidenceLabel">Evidence</span>
+                  <i aria-hidden="true">+</i>
+                </span>
+              </summary>
+              <div class="workstream-evidence">
+                <div>
+                  <p class="evidence-heading" data-i18n="scopeLabel">Scope</p>
+                  <p data-i18n="workstreamOneScope">
+                    Transfer dealer-order data to the appropriate manufacturing or operations
+                    plant across multiple regions and time zones.
+                  </p>
+                </div>
+                <div>
+                  <p class="evidence-heading" data-i18n="contributionsLabel">Key contributions</p>
+                  <ul>
+                    <li data-i18n="workstreamOneBulletOne">
+                      Completed more than 30 system cutovers and migrations.
+                    </li>
+                    <li data-i18n="workstreamOneBulletTwo">
+                      Coordinated readiness checks, deployment teams, smoke testing, and
+                      post-release follow-up.
+                    </li>
+                    <li data-i18n="workstreamOneBulletThree">
+                      Managed integration blockers, technical dependencies, firewall clearances,
+                      and delivery risks.
+                    </li>
+                    <li data-i18n="workstreamOneBulletFour">
+                      Managed backlog refinement, sprint planning, reviews, milestones, risks,
+                      blockers, and actions in Jira and Confluence.
+                    </li>
+                  </ul>
+                </div>
+            <div
+              class="evidence-tags"
+              aria-label="Project delivery evidence tags"
+              data-i18n-aria-label="projectEvidenceTagsLabel"
+            >
+                  <span>Jira</span>
+                  <span>Confluence</span>
+                  <span>Scrum</span>
+                  <span data-i18n="cutoverTag">Cutover</span>
+                  <span data-i18n="riskTag">Risk</span>
+                  <span data-i18n="stakeholdersTag">Stakeholders</span>
+                </div>
+              </div>
+            </details>
+
+            <details class="workstream-card reveal">
+              <summary>
+                <span class="workstream-index">WS-02</span>
+                <span class="workstream-summary-copy">
+                  <small data-i18n="technicalDelivery">Technical delivery</small>
+                  <strong data-i18n="technicalDevelopment">Technical Development</strong>
+                  <span data-i18n="workstreamTwoSummary">
+                    Java, Spring Boot, Angular, REST APIs, performance, and engineering quality.
+                  </span>
+                </span>
+                <span class="delivery-status" data-i18n="deliveredStatus">Delivered</span>
+                <span class="details-control">
+                  <span data-i18n="evidenceLabel">Evidence</span>
+                  <i aria-hidden="true">+</i>
+                </span>
+              </summary>
+              <div class="workstream-evidence">
+                <div>
+                  <p class="evidence-heading" data-i18n="scopeLabel">Scope</p>
+                  <p data-i18n="workstreamTwoScope">
+                    Build responsive interfaces and secure services for authentication and
+                    high-volume data transfer.
+                  </p>
+                </div>
+                <div>
+                  <p class="evidence-heading" data-i18n="contributionsLabel">Key contributions</p>
+                  <ul>
+                    <li data-i18n="workstreamTwoBulletOne">
+                      Built REST APIs handling more than 10,000 transactions per day.
+                    </li>
+                    <li data-i18n="workstreamTwoBulletTwo">
+                      Reduced average response time by approximately 30%.
+                    </li>
+                    <li data-i18n="workstreamTwoBulletThree">
+                      Created a reusable load-testing framework adopted across the project.
+                    </li>
+                    <li data-i18n="workstreamTwoBulletFour">
+                      Developed an AI-assisted pull-request review tool for early quality and risk
+                      checks.
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="evidence-tags"
+                  aria-label="Technical delivery evidence tags"
+                  data-i18n-aria-label="technicalEvidenceTagsLabel"
+                >
+                  <span>Java</span>
+                  <span>Spring Boot</span>
+                  <span>Angular</span>
+                  <span>REST APIs</span>
+                  <span data-i18n="performanceTag">Performance</span>
+                  <span data-i18n="aiReviewTag">AI review</span>
+                </div>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section
+          class="workspace-section personal-project-section"
+          id="personal-project"
+          aria-labelledby="personal-project-title"
+        >
+          <header class="workspace-section-header reveal">
+            <div>
+              <p class="section-code" data-i18n="personalProjectsCode">03 · Personal Project</p>
+              <h2 id="personal-project-title" data-i18n="personalProjectsTitle">
+                One project. Two connected disciplines.
+              </h2>
+            </div>
+            <p data-i18n="personalProjectsIntro">
+              Reserved for an independent case study that will show project management and
+              software development as one end-to-end delivery story.
+            </p>
+          </header>
+
+          <article class="personal-project-board reveal">
+            <header class="personal-project-topline">
+              <span>PERSONAL PROJECT / PP-01</span>
+              <span class="project-status project-status-wip">
+                <i aria-hidden="true"></i>
+                <span data-i18n="personalProjectStatus">Work in progress</span>
+              </span>
+            </header>
+
+            <div class="personal-project-intro">
+              <div>
+                <p class="project-kicker" data-i18n="caseStudyPreview">CASE STUDY PREVIEW</p>
+                <h3 data-i18n="personalProjectPlaceholderTitle">Personal project case study</h3>
+                <p data-i18n="personalProjectPlaceholderDescription">
+                  This space will document one project from initial problem definition through
+                  planning, implementation, validation, and release.
+                </p>
+              </div>
+
+              <dl class="personal-project-meta">
+                <div>
+                  <dt data-i18n="roleLabel">Role</dt>
+                  <dd data-i18n="personalProjectRole">Project Manager &amp; Developer</dd>
+                </div>
+                <div>
+                  <dt data-i18n="projectFormatLabel">Format</dt>
+                  <dd data-i18n="personalProjectFormat">End-to-end case study</dd>
+                </div>
+                <div>
+                  <dt data-i18n="evidenceLabel">Evidence</dt>
+                  <dd data-i18n="personalProjectEvidenceState">Added as the project develops</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div
+              class="project-track-grid"
+              aria-label="Two connected project delivery tracks"
+              data-i18n-aria-label="projectTracksLabel"
+            >
+              <article class="project-track project-track-pm">
+                <span class="project-track-code">TRACK / PM</span>
+                <h4 data-i18n="pmTrackTitle">Project Management</h4>
+                <p data-i18n="pmTrackIntro">
+                  How the work is framed, prioritised, governed, and communicated.
+                </p>
+                <ul>
+                  <li data-i18n="pmTrackCharter">Charter &amp; scope</li>
+                  <li data-i18n="pmTrackRoadmap">Roadmap &amp; milestones</li>
+                  <li data-i18n="pmTrackRisk">Risks &amp; decisions</li>
+                </ul>
+              </article>
+
+              <article class="project-track project-track-dev">
+                <span class="project-track-code">TRACK / DEV</span>
+                <h4 data-i18n="devTrackTitle">Development</h4>
+                <p data-i18n="devTrackIntro">
+                  How the solution is designed, built, tested, and released.
+                </p>
+                <ul>
+                  <li data-i18n="devTrackArchitecture">Architecture &amp; stack</li>
+                  <li data-i18n="devTrackBuild">Incremental build</li>
+                  <li data-i18n="devTrackTesting">Testing &amp; deployment</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="project-flow-block">
+              <p class="evidence-heading" data-i18n="projectLifecycleTitle">Planned delivery flow</p>
+              <ol
+                class="project-flow"
+                aria-label="Planned personal project lifecycle"
+                data-i18n-aria-label="projectLifecycleLabel"
+              >
+                <li>
+                  <span>01</span>
+                  <div>
+                    <strong data-i18n="stageDiscover">Discover</strong>
+                    <small data-i18n="stageDiscoverText">Problem &amp; users</small>
+                  </div>
+                </li>
+                <li>
+                  <span>02</span>
+                  <div>
+                    <strong data-i18n="stagePlan">Plan</strong>
+                    <small data-i18n="stagePlanText">Scope, roadmap &amp; risks</small>
+                  </div>
+                </li>
+                <li>
+                  <span>03</span>
+                  <div>
+                    <strong data-i18n="stageBuild">Build</strong>
+                    <small data-i18n="stageBuildText">Incremental development</small>
+                  </div>
+                </li>
+                <li>
+                  <span>04</span>
+                  <div>
+                    <strong data-i18n="stageValidate">Validate</strong>
+                    <small data-i18n="stageValidateText">Testing &amp; feedback</small>
+                  </div>
+                </li>
+                <li>
+                  <span>05</span>
+                  <div>
+                    <strong data-i18n="stageRelease">Release</strong>
+                    <small data-i18n="stageReleaseText">Deployment &amp; retrospective</small>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="project-evidence-preview">
+              <p class="evidence-heading" data-i18n="projectEvidencePreviewTitle">
+                Evidence areas reserved
+              </p>
+              <div class="project-evidence-grid">
+                <article class="evidence-placeholder">
+                  <span>01</span>
+                  <div>
+                    <h4 data-i18n="flowDiagramTitle">Flow diagrams</h4>
+                    <p data-i18n="flowDiagramPlaceholder">Process and architecture views</p>
+                  </div>
+                  <small data-i18n="comingSoon">Coming soon</small>
+                </article>
+                <article class="evidence-placeholder">
+                  <span>02</span>
+                  <div>
+                    <h4 data-i18n="screenshotsTitle">Screenshots</h4>
+                    <p data-i18n="screenshotsPlaceholder">Product screens with context</p>
+                  </div>
+                  <small data-i18n="comingSoon">Coming soon</small>
+                </article>
+                <article class="evidence-placeholder">
+                  <span>03</span>
+                  <div>
+                    <h4 data-i18n="documentsTitle">Project documents</h4>
+                    <p data-i18n="documentsPlaceholder">
+                      Charter, roadmap, risk register, and retrospective
+                    </p>
+                  </div>
+                  <small data-i18n="comingSoon">Coming soon</small>
+                </article>
+              </div>
+            </div>
+
+            <p class="personal-project-note" data-i18n="personalProjectWipNote">
+              Layout preview only — project details and evidence will be added as the work progresses.
+            </p>
+          </article>
+        </section>
+
+        <section class="workspace-section" id="projects" aria-labelledby="deliverables-title">
+          <header class="workspace-section-header reveal">
+            <div>
+              <p class="section-code" data-i18n="deliverablesCode">04 · Work Projects</p>
+              <h2 id="deliverables-title" data-i18n="deliverablesTitle">
+                Professional projects backed by delivery evidence.
+              </h2>
+            </div>
+            <p data-i18n="deliverablesIntro">
+              Filter the CV-based work packages, then open any item for its objective,
+              contribution, and verified result.
+            </p>
+          </header>
+
+          <div
+            class="filter-toolbar"
+            role="toolbar"
+            aria-label="Filter work projects"
+            data-i18n-aria-label="filterToolbarLabel"
+          >
+            <span data-i18n="viewLabel">View</span>
+            <button type="button" data-filter="all" aria-pressed="true" data-i18n="filterAll">All</button>
+            <button type="button" data-filter="project" aria-pressed="false" data-i18n="filterProject">
+              Project delivery
+            </button>
+            <button type="button" data-filter="technical" aria-pressed="false" data-i18n="filterTechnical">
+              Technical delivery
+            </button>
+            <output class="filter-count" aria-live="polite">4 <span data-i18n="itemsLabel">items</span></output>
+          </div>
+
+          <div class="deliverable-grid">
+            <details class="deliverable-card reveal" data-category="project">
+              <summary>
+                <span class="deliverable-topline">
+                  <span>WP-01</span>
+                  <span class="delivery-status" data-i18n="deliveredStatus">Delivered</span>
+                </span>
+                <strong>Global Dealer-Order Data Migration</strong>
+                <span data-i18n="deliverableOneSummary">
+                  Global coordination across Mercedes-Benz AG and regional teams.
+                </span>
+                <span class="open-case"><span data-i18n="openCase">Open case</span><i aria-hidden="true">+</i></span>
+              </summary>
+              <div class="deliverable-body">
+                <dl>
+                  <div>
+                    <dt data-i18n="objectiveLabel">Objective</dt>
+                    <dd data-i18n="deliverableOneObjective">
+                      Route dealer-order data to the correct manufacturing or operations plant.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="contributionLabel">Contribution</dt>
+                    <dd data-i18n="deliverableOneContribution">
+                      Sole delivery lead coordinating readiness, teams, dependencies, and
+                      stakeholder communication.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="outcomeLabel">Outcome</dt>
+                    <dd data-i18n="deliverableOneOutcome">
+                      More than 30 system cutovers and migrations completed.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="deliverable-card reveal" data-category="project">
+              <summary>
+                <span class="deliverable-topline">
+                  <span>WP-02</span>
+                  <span class="delivery-status" data-i18n="deliveredStatus">Delivered</span>
+                </span>
+                <strong data-i18n="cutoverPackageTitle">Cutover &amp; Release Coordination</strong>
+                <span data-i18n="deliverableTwoSummary">
+                  Planning, readiness, deployment, smoke testing, and post-release follow-up.
+                </span>
+                <span class="open-case"><span data-i18n="openCase">Open case</span><i aria-hidden="true">+</i></span>
+              </summary>
+              <div class="deliverable-body">
+                <dl>
+                  <div>
+                    <dt data-i18n="objectiveLabel">Objective</dt>
+                    <dd data-i18n="deliverableTwoObjective">
+                      Move releases through cutover with teams, risks, and dependencies aligned.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="contributionLabel">Contribution</dt>
+                    <dd data-i18n="deliverableTwoContribution">
+                      Tracked milestones, risks, blockers, and action items while coordinating
+                      technical and regional stakeholders.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="toolsLabel">Tools</dt>
+                    <dd>Jira · Confluence · Microsoft 365</dd>
+                  </div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="deliverable-card reveal" data-category="technical">
+              <summary>
+                <span class="deliverable-topline">
+                  <span>WP-03</span>
+                  <span class="delivery-status" data-i18n="deliveredStatus">Delivered</span>
+                </span>
+                <strong data-i18n="apiPackageTitle">High-Volume API Performance</strong>
+                <span data-i18n="deliverableThreeSummary">
+                  Secure REST services supporting more than 10,000 daily transactions.
+                </span>
+                <span class="open-case"><span data-i18n="openCase">Open case</span><i aria-hidden="true">+</i></span>
+              </summary>
+              <div class="deliverable-body">
+                <dl>
+                  <div>
+                    <dt data-i18n="objectiveLabel">Objective</dt>
+                    <dd data-i18n="deliverableThreeObjective">
+                      Improve throughput and response performance for high-volume data transfers.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="contributionLabel">Contribution</dt>
+                    <dd data-i18n="deliverableThreeContribution">
+                      Built and tuned Java/Spring Boot REST APIs and supporting integrations.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="outcomeLabel">Outcome</dt>
+                    <dd data-i18n="deliverableThreeOutcome">
+                      Approximately 30% lower average response time.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="deliverable-card reveal" data-category="technical">
+              <summary>
+                <span class="deliverable-topline">
+                  <span>WP-04</span>
+                  <span class="delivery-status" data-i18n="deliveredStatus">Delivered</span>
+                </span>
+                <strong data-i18n="qualityPackageTitle">Engineering Quality Enablement</strong>
+                <span data-i18n="deliverableFourSummary">
+                  Reusable load testing and AI-assisted pull-request review.
+                </span>
+                <span class="open-case"><span data-i18n="openCase">Open case</span><i aria-hidden="true">+</i></span>
+              </summary>
+              <div class="deliverable-body">
+                <dl>
+                  <div>
+                    <dt data-i18n="objectiveLabel">Objective</dt>
+                    <dd data-i18n="deliverableFourObjective">
+                      Identify performance and code-quality risks before production.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="contributionLabel">Contribution</dt>
+                    <dd data-i18n="deliverableFourContribution">
+                      Designed a reusable load-testing framework and an AI-assisted code-review
+                      tool.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="outcomeLabel">Outcome</dt>
+                    <dd data-i18n="deliverableFourOutcome">
+                      The testing framework was adopted across the project for earlier bottleneck
+                      detection.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="workspace-section capability-section" id="skills" aria-labelledby="capabilities-title">
+          <header class="workspace-section-header reveal">
+            <div>
+              <p class="section-code" data-i18n="capabilitiesCode">05 · Capability Matrix</p>
+              <h2 id="capabilities-title" data-i18n="capabilitiesTitle">Capabilities linked to evidence.</h2>
+            </div>
+            <p data-i18n="capabilitiesIntro">
+              No abstract ratings: each capability is grounded in work recorded in the CV.
+            </p>
+          </header>
+
+          <div class="capability-grid">
+            <article class="capability-card reveal">
+              <header>
+                <span>CAP-01</span>
+                <h3 data-i18n="capProjectTitle">Project controls</h3>
+              </header>
+              <ul>
+                <li><span data-i18n="capProjectOne">IT project coordination</span><small>WS-01</small></li>
+                <li><span data-i18n="capProjectTwo">Risk, issue &amp; dependency management</span><small>WS-01</small></li>
+                <li><span data-i18n="capProjectThree">Release, cutover &amp; migration management</span><small>WP-01/02</small></li>
+                <li><span data-i18n="capProjectFour">Milestone tracking &amp; status reporting</span><small>WS-01</small></li>
+              </ul>
+            </article>
+
+            <article class="capability-card reveal">
+              <header>
+                <span>CAP-02</span>
+                <h3 data-i18n="capPeopleTitle">Agile &amp; stakeholders</h3>
+              </header>
+              <ul>
+                <li><span data-i18n="capPeopleOne">Agile, Scrum &amp; SAFe delivery</span><small>WS-01</small></li>
+                <li><span data-i18n="capPeopleTwo">Stakeholder &amp; partner management</span><small>WP-01</small></li>
+                <li><span data-i18n="capPeopleThree">Requirements &amp; user stories</span><small>WS-01</small></li>
+                <li><span data-i18n="capPeopleFour">Business-technology alignment</span><small>WS-01/02</small></li>
+              </ul>
+            </article>
+
+            <article class="capability-card reveal">
+              <header>
+                <span>CAP-03</span>
+                <h3 data-i18n="capTechTitle">Technical fluency</h3>
+              </header>
+              <ul>
+                <li><span>Jira &amp; Confluence</span><small>WS-01</small></li>
+                <li><span>Java · Spring Boot · REST APIs</span><small>WP-03</small></li>
+                <li><span>Angular · Integration · Authentication</span><small>WS-02</small></li>
+                <li><span data-i18n="capTechFour">Load &amp; performance testing</span><small>WP-04</small></li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="tool-register reveal">
+            <span data-i18n="toolRegisterLabel">Tool register</span>
+            <div>
+              <span>Jira</span>
+              <span>Confluence</span>
+              <span>Microsoft 365</span>
+              <span>Scrum</span>
+              <span>SAFe</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Angular</span>
+              <span>REST APIs</span>
+              <span data-i18n="aiReviewTagLong">AI-assisted code review</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="education" aria-labelledby="roadmap-title">
+          <header class="workspace-section-header reveal">
+            <div>
+              <p class="section-code" data-i18n="roadmapCode">06 · Career Roadmap</p>
+              <h2 id="roadmap-title" data-i18n="roadmapTitle">A deliberate move toward project leadership.</h2>
+            </div>
+            <p data-i18n="roadmapIntro">
+              Engineering built the analytical foundation, delivery created the evidence, and
+              management education defined the next direction.
+            </p>
+          </header>
+
+          <ol class="roadmap reveal">
+            <li>
+              <span class="roadmap-marker">01</span>
+              <div class="roadmap-date">2016 — 2021</div>
+              <div>
+                <small data-i18n="foundationPhase">Foundation</small>
+                <h3 data-i18n="mechanicalDegree">Bachelor's, Mechanical Engineering</h3>
+                <p data-i18n="puneUniversity">Pune University, India</p>
+              </div>
+            </li>
+            <li>
+              <span class="roadmap-marker">02</span>
+              <div class="roadmap-date">01/2022 — 06/2025</div>
+              <div>
+                <small data-i18n="deliveryPhase">Delivery experience</small>
+                <h3 data-i18n="associateRole">Associate Consultant</h3>
+                <p data-i18n="associateRoadmapText">Capgemini · Project management &amp; technical delivery</p>
+              </div>
+            </li>
+            <li>
+              <span class="roadmap-marker">03</span>
+              <div class="roadmap-date">2025 — 2026</div>
+              <div>
+                <small data-i18n="managementPhase">Management layer</small>
+                <h3>MBA, General Management</h3>
+                <p>Munich Business School</p>
+              </div>
+            </li>
+            <li>
+              <span class="roadmap-marker">04</span>
+              <div class="roadmap-date">2026</div>
+              <div>
+                <small data-i18n="credentialPhase">Credential</small>
+                <h3>Google Project Management Professional Certificate</h3>
+                <p data-i18n="credentialRoadmapText">Structured project-management practice</p>
+              </div>
+            </li>
+            <li class="roadmap-next">
+              <span class="roadmap-marker">→</span>
+              <div class="roadmap-date" data-i18n="nextPhase">Next phase</div>
+              <div>
+                <small data-i18n="targetPhase">Target</small>
+                <h3 data-i18n="targetRole">IT Project Management</h3>
+                <p data-i18n="targetRoadmapText">Applying technical fluency to end-to-end delivery leadership.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="mba-focus reveal">
+            <span data-i18n="mbaFocusLabel">MBA focus areas</span>
+            <div>
+              <span data-i18n="strategy">Strategy</span>
+              <span data-i18n="finance">Finance</span>
+              <span data-i18n="marketing">Marketing</span>
+              <span data-i18n="supplyChain">Supply Chain Management</span>
+              <span data-i18n="accounting">Accounting</span>
+              <span data-i18n="projectManagement">Project Management</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace-section section-subtle" id="certifications" aria-labelledby="credentials-title">
+          <header class="workspace-section-header reveal">
+            <div>
+              <p class="section-code" data-i18n="credentialsCode">07 · Credentials</p>
+              <h2 id="credentials-title" data-i18n="credentialsTitle">Formal learning and language readiness.</h2>
+            </div>
+          </header>
+
+          <div class="credential-layout">
+            <article class="credential-card reveal">
+              <div class="credential-mark" aria-hidden="true">G</div>
+              <div>
+                <p class="credential-meta">GOOGLE · 2026</p>
+                <h3>Google Project Management Professional Certificate</h3>
+                <p data-i18n="credentialDescription">
+                  Professional development supporting structured initiation, planning, Agile
+                  delivery, execution, and real-world application.
+                </p>
+              </div>
+              <span class="credential-state" data-i18n="completed">Completed</span>
+            </article>
+
+            <aside class="language-panel reveal" aria-labelledby="language-panel-title">
+              <p class="credential-meta" id="language-panel-title" data-i18n="languageReadiness">LANGUAGE READINESS</p>
+              <dl>
+                <div>
+                  <dt data-i18n="english">English</dt>
+                  <dd data-i18n="professionalUse">Listed in the CV</dd>
+                </div>
+                <div>
+                  <dt data-i18n="german">German</dt>
+                  <dd>A2 · <span data-i18n="improving">Improving</span></dd>
+                </div>
+              </dl>
+              <p data-i18n="languagePanelNote">
+                Based in Munich and actively improving German proficiency.
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="workspace-section contact-section" id="contact" aria-labelledby="contact-title">
+          <div class="contact-board reveal">
+            <div class="contact-copy">
+              <p class="section-code" data-i18n="contactCode">08 · Project Kickoff</p>
+              <h2 id="contact-title" data-i18n="contactTitle">Ready for the next delivery challenge.</h2>
+              <p data-i18n="contactIntro">
+                I am exploring IT project-management opportunities where technical understanding,
+                structured delivery, and clear stakeholder communication matter.
+              </p>
+              <div class="contact-actions">
+                <a class="action action-signal" href="mailto:wanmaliaditya@gmail.com">
+                  <span data-i18n="emailMe">Email me</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  class="action action-dark-outline"
+                  href="assets/documents/Aditya-Wanmali-CV.pdf"
+                  download="Aditya-Wanmali-CV.pdf"
+                >
+                  <span data-i18n="downloadCv">Download CV</span>
+                  <span aria-hidden="true">↓</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-register" aria-label="Contact details" data-i18n-aria-label="contactDetailsLabel">
+              <a href="mailto:wanmaliaditya@gmail.com">
+                <span><small data-i18n="email">Email</small>wanmaliaditya@gmail.com</span>
+                <i aria-hidden="true">↗</i>
+              </a>
+              <a href="https://www.linkedin.com/in/aditya-wanmali/" target="_blank" rel="noopener noreferrer">
+                <span><small>LinkedIn</small>linkedin.com/in/aditya-wanmali</span>
+                <i aria-hidden="true">↗</i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="workspace-footer">
+          <p>© <span id="current-year">2026</span> Aditya Wanmali</p>
+          <p data-i18n="footerNote">Project delivery portfolio · Built for clarity</p>
+          <a href="#home"><span data-i18n="backToOverview">Back to overview</span> ↑</a>
+        </footer>
+      </main>
+    </div>
+
+    <div class="sr-only" id="interface-status" aria-live="polite"></div>
 
     <script type="application/ld+json">
       {
@@ -516,14 +1075,14 @@
         "@type": "Person",
         "name": "Aditya Wanmali",
         "url": "https://adityawanmali.github.io/",
-        "jobTitle": "IT Professional",
+        "jobTitle": "Project Management and Technical Delivery Professional",
+        "email": "mailto:wanmaliaditya@gmail.com",
         "homeLocation": {
           "@type": "Place",
           "name": "Munich, Germany"
         },
         "sameAs": [
-          "https://www.linkedin.com/in/aditya-wanmali/",
-          "https://github.com/AdityaWanmali"
+          "https://www.linkedin.com/in/aditya-wanmali/"
         ]
       }
     </script>
