@@ -1,6 +1,7 @@
 document.documentElement.classList.add("js");
 
 const header = document.querySelector("#site-header");
+const scrollProgress = document.querySelector(".scroll-progress");
 const brandLink = document.querySelector(".brand");
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#primary-navigation");
@@ -52,6 +53,16 @@ navLinks.forEach((link) => {
 
 brandLink?.addEventListener("click", () => setMenuState(false));
 
+document.addEventListener("pointerdown", (event) => {
+  const menuIsOpen = menuToggle?.getAttribute("aria-expanded") === "true";
+  const clickedInsideMenu = navigation?.contains(event.target);
+  const clickedMenuButton = menuToggle?.contains(event.target);
+
+  if (menuIsOpen && !clickedInsideMenu && !clickedMenuButton) {
+    setMenuState(false);
+  }
+});
+
 document.addEventListener("keydown", (event) => {
   const menuIsOpen = menuToggle?.getAttribute("aria-expanded") === "true";
 
@@ -84,6 +95,32 @@ let scrollFrameRequested = false;
 
 function updateHeader() {
   header?.classList.toggle("scrolled", window.scrollY > 12);
+
+  const scrollableDistance = document.documentElement.scrollHeight - window.innerHeight;
+  const rawProgress = scrollableDistance > 0 ? window.scrollY / scrollableDistance : 0;
+  const progress = Math.min(1, Math.max(0, rawProgress));
+  scrollProgress?.style.setProperty("--scroll-progress", String(progress));
+
+  const readingLine = window.scrollY + window.innerHeight * 0.38;
+  let activeId = sections[0]?.id;
+
+  sections.forEach((section) => {
+    if (section.offsetTop <= readingLine) activeId = section.id;
+  });
+
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+    activeId = sections[sections.length - 1]?.id;
+  }
+
+  navLinks.forEach((link) => {
+    const isActive = link.getAttribute("href") === `#${activeId}`;
+    if (isActive) {
+      link.setAttribute("aria-current", "true");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+
   scrollFrameRequested = false;
 }
 
@@ -98,35 +135,11 @@ window.addEventListener(
   { passive: true }
 );
 
+window.addEventListener("resize", updateHeader, { passive: true });
+
 updateHeader();
 
 if ("IntersectionObserver" in window) {
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      const visibleSections = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-      if (!visibleSections.length) return;
-
-      const activeId = visibleSections[0].target.id;
-      navLinks.forEach((link) => {
-        const isActive = link.getAttribute("href") === `#${activeId}`;
-        if (isActive) {
-          link.setAttribute("aria-current", "true");
-        } else {
-          link.removeAttribute("aria-current");
-        }
-      });
-    },
-    {
-      rootMargin: "-28% 0px -58% 0px",
-      threshold: [0, 0.15, 0.4],
-    }
-  );
-
-  sections.forEach((section) => sectionObserver.observe(section));
-
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
