@@ -14,7 +14,7 @@ I have experience working with international organisations and clients, includin
 
 I am interested in opportunities related to:
 
-- IT Project Management
+- Project Management & Delivery
 - Business Analysis
 - Digital Transformation
 - Process Improvement
