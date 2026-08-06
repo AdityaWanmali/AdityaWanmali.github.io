@@ -520,164 +520,479 @@
             <div>
               <p class="section-code" data-i18n="personalProjectsCode">03 · Personal Project</p>
               <h2 id="personal-project-title" data-i18n="personalProjectsTitle">
-                One project. Two connected disciplines.
+                A personal product, delivered end to end.
               </h2>
             </div>
             <p data-i18n="personalProjectsIntro">
-              Reserved for an independent case study that will show project management and
-              software development as one end-to-end delivery story.
+              My Moment Space shows how product definition, delivery planning, native iOS
+              implementation, and validation work together.
             </p>
           </header>
 
           <article class="personal-project-board reveal">
             <header class="personal-project-topline">
-              <span>PERSONAL PROJECT / PP-01</span>
-              <span class="project-status project-status-wip">
+              <span>PERSONAL PRODUCT / MMS-01</span>
+              <span class="project-status project-status-prerelease">
                 <i aria-hidden="true"></i>
-                <span data-i18n="personalProjectStatus">Work in progress</span>
+                <span data-i18n="personalProjectStatus">Pre-release prototype</span>
               </span>
             </header>
 
             <div class="personal-project-intro">
               <div>
-                <p class="project-kicker" data-i18n="caseStudyPreview">CASE STUDY PREVIEW</p>
-                <h3 data-i18n="personalProjectPlaceholderTitle">Personal project case study</h3>
+                <p class="project-kicker" data-i18n="caseStudyPreview">SOURCE-BACKED CASE STUDY</p>
+                <h3 data-i18n="personalProjectPlaceholderTitle">
+                  My Moment Space: Local-First Wellbeing Journal
+                </h3>
                 <p data-i18n="personalProjectPlaceholderDescription">
-                  This space will document one project from initial problem definition through
-                  planning, implementation, validation, and release.
+                  A native iOS and iPadOS prototype that turns four-question check-ins into local
+                  history and a visual tree journey.
                 </p>
+                <div class="project-core-stack" aria-label="Core project technology" data-i18n-aria-label="coreStackLabel">
+                  <span>Swift</span>
+                  <span>SwiftUI</span>
+                  <span>SwiftData</span>
+                  <span>Keychain</span>
+                </div>
               </div>
 
               <dl class="personal-project-meta">
                 <div>
-                  <dt data-i18n="roleLabel">Role</dt>
-                  <dd data-i18n="personalProjectRole">Project Management &amp; Development</dd>
+                  <dt data-i18n="projectTypeLabel">Product</dt>
+                  <dd data-i18n="projectTypeValue">Local-first wellbeing journal</dd>
                 </div>
                 <div>
-                  <dt data-i18n="projectFormatLabel">Format</dt>
-                  <dd data-i18n="personalProjectFormat">End-to-end case study</dd>
+                  <dt data-i18n="personalProjectPlatformLabel">Platform</dt>
+                  <dd data-i18n="personalProjectPlatformValue">iOS &amp; iPadOS · local-only</dd>
                 </div>
                 <div>
-                  <dt data-i18n="evidenceLabel">Evidence</dt>
-                  <dd data-i18n="personalProjectEvidenceState">Added as the project develops</dd>
+                  <dt data-i18n="projectStageLabel">Stage</dt>
+                  <dd data-i18n="projectStageValue">Pre-release prototype</dd>
+                </div>
+                <div>
+                  <dt data-i18n="validationLabel">Validation</dt>
+                  <dd data-i18n="validationValue">Simulator smoke test complete · physical device pending</dd>
                 </div>
               </dl>
             </div>
 
-            <div
-              class="project-track-grid"
-              aria-label="Two connected project delivery tracks"
-              data-i18n-aria-label="projectTracksLabel"
+            <section class="case-block case-screenshots" aria-labelledby="mms-screenshots-title">
+              <div class="case-block-header">
+                <div>
+                  <p class="case-block-code">PRODUCT / PREVIEW</p>
+                  <h4 id="mms-screenshots-title" data-i18n="productPreviewTitle">Product preview</h4>
+                </div>
+                <p data-i18n="productPreviewIntro">
+                  Five simulator captures showing the implemented product flow.
+                </p>
+              </div>
+
+              <div class="project-screenshot-grid">
+                <figure class="project-screenshot">
+                  <a class="screenshot-frame" href="assets/images/my-moment-space/pin-access.png">
+                    <img
+                      src="assets/images/my-moment-space/pin-access.png"
+                      width="1206"
+                      height="2622"
+                      loading="lazy"
+                      decoding="async"
+                      alt="My Moment Space PIN entry screen with a numeric keypad"
+                      data-i18n-alt="pinScreenshotAlt"
+                    />
+                  </a>
+                  <figcaption>
+                    <strong data-i18n="pinScreenshotTitle">PIN &amp; local access</strong>
+                    <span data-i18n="pinScreenshotText">Four-digit entry gate stored through Keychain</span>
+                  </figcaption>
+                </figure>
+                <figure class="project-screenshot">
+                  <a class="screenshot-frame" href="assets/images/my-moment-space/home-tree.png">
+                    <img
+                      src="assets/images/my-moment-space/home-tree.png"
+                      width="1206"
+                      height="2622"
+                      loading="lazy"
+                      decoding="async"
+                      alt="My Moment Space home screen showing an animated emerald tree and check-in options"
+                      data-i18n-alt="homeScreenshotAlt"
+                    />
+                  </a>
+                  <figcaption>
+                    <strong data-i18n="homeScreenshotTitle">Home &amp; visual progress</strong>
+                    <span data-i18n="homeScreenshotText">Animated tree, cycle progress and primary actions</span>
+                  </figcaption>
+                </figure>
+                <figure class="project-screenshot">
+                  <a class="screenshot-frame" href="assets/images/my-moment-space/check-in.png">
+                    <img
+                      src="assets/images/my-moment-space/check-in.png"
+                      width="1206"
+                      height="2622"
+                      loading="lazy"
+                      decoding="async"
+                      alt="My Moment Space check-in screen showing four wellbeing rating choices"
+                      data-i18n-alt="checkinScreenshotAlt"
+                    />
+                  </a>
+                  <figcaption>
+                    <strong data-i18n="checkinScreenshotTitle">Four-question check-in</strong>
+                    <span data-i18n="checkinScreenshotText">One of four wellbeing rating steps</span>
+                  </figcaption>
+                </figure>
+                <figure class="project-screenshot">
+                  <a class="screenshot-frame" href="assets/images/my-moment-space/save-confirmation.png">
+                    <img
+                      src="assets/images/my-moment-space/save-confirmation.png"
+                      width="1206"
+                      height="2622"
+                      loading="lazy"
+                      decoding="async"
+                      alt="My Moment Space confirmation screen stating that the check-in was saved"
+                      data-i18n-alt="saveScreenshotAlt"
+                    />
+                  </a>
+                  <figcaption>
+                    <strong data-i18n="saveScreenshotTitle">Save confirmation</strong>
+                    <span data-i18n="saveScreenshotText">Clear completion state after local storage</span>
+                  </figcaption>
+                </figure>
+                <figure class="project-screenshot">
+                  <a class="screenshot-frame" href="assets/images/my-moment-space/settings.png">
+                    <img
+                      src="assets/images/my-moment-space/settings.png"
+                      width="1206"
+                      height="2622"
+                      loading="lazy"
+                      decoding="async"
+                      alt="My Moment Space settings screen showing journey statistics, tree themes and reset control"
+                      data-i18n-alt="settingsScreenshotAlt"
+                    />
+                  </a>
+                  <figcaption>
+                    <strong data-i18n="settingsScreenshotTitle">Settings &amp; journey control</strong>
+                    <span data-i18n="settingsScreenshotText">Progress stats, tree themes and reset controls</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </section>
+
+            <section class="case-block case-overview" aria-labelledby="mms-overview-title">
+              <div class="case-block-header">
+                <div>
+                  <p class="case-block-code">CASE STUDY / AT A GLANCE</p>
+                  <h4 id="mms-overview-title" data-i18n="projectOverviewTitle">What matters most</h4>
+                </div>
+                <p data-i18n="projectOverviewIntro">
+                  The problem, my contribution, and the current delivery state in one scan.
+                </p>
+              </div>
+
+              <div class="project-overview-grid">
+                <article class="project-overview-card">
+                  <span>01</span>
+                  <h5 data-i18n="projectProblemTitle">Problem</h5>
+                  <p data-i18n="projectProblemText">
+                    Personal reflection can feel time-consuming and abstract. This prototype
+                    explores a shorter check-in with local history and visual progress. User
+                    impact has not yet been validated.
+                  </p>
+                </article>
+                <article class="project-overview-card project-overview-card-contribution">
+                  <span>02</span>
+                  <h5 data-i18n="myContributionTitle">My contribution</h5>
+                  <p data-i18n="myContributionText">
+                    I defined the product rules and user flow, documented architecture, risks,
+                    quality and release readiness, implemented the SwiftUI app, and smoke-tested
+                    the core flow in the simulator.
+                  </p>
+                </article>
+                <article class="project-overview-card project-overview-card-status">
+                  <span>03</span>
+                  <h5 data-i18n="projectCurrentStatusTitle">Current status</h5>
+                  <p data-i18n="projectCurrentStatusText">
+                    Pre-release prototype. Source implementation, Debug and Release compilation,
+                    and simulator smoke testing are complete. Automated tests and physical-device
+                    validation remain pending.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <figure
+              class="case-block case-diagram case-delivery-journey"
+              aria-labelledby="mms-delivery-journey-title"
+              aria-describedby="mms-delivery-journey-note"
             >
-              <article class="project-track project-track-pm">
-                <span class="project-track-code">TRACK / PM</span>
-                <h4 data-i18n="pmTrackTitle">Project Management</h4>
-                <p data-i18n="pmTrackIntro">
-                  How the work is framed, prioritised, governed, and communicated.
+              <figcaption class="case-block-header">
+                <div>
+                  <p class="case-block-code">DELIVERY / JOURNEY</p>
+                  <h4 id="mms-delivery-journey-title" data-i18n="deliveryJourneyTitle">
+                    From scope to release preparation
+                  </h4>
+                </div>
+                <p id="mms-delivery-journey-note" data-i18n="deliveryJourneyIntro">
+                  A concise view of how product framing, technical delivery, and validation connect.
                 </p>
-                <ul>
-                  <li data-i18n="pmTrackCharter">Charter &amp; scope</li>
-                  <li data-i18n="pmTrackRoadmap">Roadmap &amp; milestones</li>
-                  <li data-i18n="pmTrackRisk">Risks &amp; decisions</li>
-                </ul>
-              </article>
-
-              <article class="project-track project-track-dev">
-                <span class="project-track-code">TRACK / DEV</span>
-                <h4 data-i18n="devTrackTitle">Development</h4>
-                <p data-i18n="devTrackIntro">
-                  How the solution is designed, built, tested, and released.
-                </p>
-                <ul>
-                  <li data-i18n="devTrackArchitecture">Architecture &amp; stack</li>
-                  <li data-i18n="devTrackBuild">Incremental build</li>
-                  <li data-i18n="devTrackTesting">Testing &amp; deployment</li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="project-flow-block">
-              <p class="evidence-heading" data-i18n="projectLifecycleTitle">Planned delivery flow</p>
+              </figcaption>
               <ol
                 class="project-flow"
-                aria-label="Planned personal project lifecycle"
-                data-i18n-aria-label="projectLifecycleLabel"
+                aria-label="My Moment Space delivery journey"
+                data-i18n-aria-label="deliveryJourneyLabel"
               >
                 <li>
-                  <span>01</span>
+                  <span aria-hidden="true">01</span>
                   <div>
-                    <strong data-i18n="stageDiscover">Discover</strong>
-                    <small data-i18n="stageDiscoverText">Problem &amp; users</small>
+                    <strong data-i18n="deliveryStepScope">Set scope</strong>
+                    <small data-i18n="deliveryStepScopeText">Product flow, boundaries &amp; rules</small>
                   </div>
                 </li>
                 <li>
-                  <span>02</span>
+                  <span aria-hidden="true">02</span>
                   <div>
-                    <strong data-i18n="stagePlan">Plan</strong>
-                    <small data-i18n="stagePlanText">Scope, roadmap &amp; risks</small>
+                    <strong data-i18n="deliveryStepDesign">Design</strong>
+                    <small data-i18n="deliveryStepDesignText">Architecture, data &amp; security</small>
                   </div>
                 </li>
                 <li>
-                  <span>03</span>
+                  <span aria-hidden="true">03</span>
                   <div>
-                    <strong data-i18n="stageBuild">Build</strong>
-                    <small data-i18n="stageBuildText">Incremental development</small>
+                    <strong data-i18n="deliveryStepBuild">Build</strong>
+                    <small data-i18n="deliveryStepBuildText">SwiftUI &amp; local persistence</small>
                   </div>
                 </li>
                 <li>
-                  <span>04</span>
+                  <span aria-hidden="true">04</span>
                   <div>
-                    <strong data-i18n="stageValidate">Validate</strong>
-                    <small data-i18n="stageValidateText">Testing &amp; feedback</small>
+                    <strong data-i18n="deliveryStepValidate">Validate</strong>
+                    <small data-i18n="deliveryStepValidateText">Builds &amp; simulator smoke test</small>
                   </div>
                 </li>
                 <li>
-                  <span>05</span>
+                  <span aria-hidden="true">05</span>
                   <div>
-                    <strong data-i18n="stageRelease">Release</strong>
-                    <small data-i18n="stageReleaseText">Deployment &amp; retrospective</small>
+                    <strong data-i18n="deliveryStepPrepare">Prepare release</strong>
+                    <small data-i18n="deliveryStepPrepareText">Risks, tests &amp; readiness checklist</small>
                   </div>
                 </li>
               </ol>
-            </div>
-
-            <div class="project-evidence-preview">
-              <p class="evidence-heading" data-i18n="projectEvidencePreviewTitle">
-                Evidence areas reserved
+              <p class="case-boundary-note" data-i18n="deliveryJourneyBoundary">
+                Release preparation is documented; this is not a production release.
               </p>
-              <div class="project-evidence-grid">
-                <article class="evidence-placeholder">
-                  <span>01</span>
-                  <div>
-                    <h4 data-i18n="flowDiagramTitle">Flow diagrams</h4>
-                    <p data-i18n="flowDiagramPlaceholder">Process and architecture views</p>
-                  </div>
-                  <small data-i18n="comingSoon">Coming soon</small>
+            </figure>
+
+            <section class="case-block case-delivery-snapshot" aria-labelledby="mms-delivery-snapshot-title">
+              <div class="case-block-header">
+                <div>
+                  <p class="case-block-code">DELIVERY / SNAPSHOT</p>
+                  <h4 id="mms-delivery-snapshot-title" data-i18n="deliverySnapshotTitle">
+                    Delivery results
+                  </h4>
+                </div>
+                <p data-i18n="deliverySnapshotIntro">
+                  Four facts a recruiter can verify at a glance.
+                </p>
+              </div>
+
+              <div class="case-evidence-grid delivery-snapshot-grid">
+                <article class="case-evidence-card" data-state="implemented">
+                  <small class="case-state case-state-implemented" data-i18n="builtState">BUILT</small>
+                  <h5 data-i18n="builtResultTitle">Local product loop</h5>
+                  <p data-i18n="builtResultText">
+                    PIN access, check-in, history, tree progression, settings, and reset are implemented.
+                  </p>
                 </article>
-                <article class="evidence-placeholder">
-                  <span>02</span>
-                  <div>
-                    <h4 data-i18n="screenshotsTitle">Screenshots</h4>
-                    <p data-i18n="screenshotsPlaceholder">Product screens with context</p>
-                  </div>
-                  <small data-i18n="comingSoon">Coming soon</small>
+                <article class="case-evidence-card" data-state="validated">
+                  <small class="case-state case-state-validated" data-i18n="testedState">TESTED</small>
+                  <h5 data-i18n="testedResultTitle">Simulator validation</h5>
+                  <p data-i18n="testedResultText">
+                    Debug and Release builds compile; the core flow was smoke-tested in the iOS simulator.
+                  </p>
                 </article>
-                <article class="evidence-placeholder">
-                  <span>03</span>
-                  <div>
-                    <h4 data-i18n="documentsTitle">Project documents</h4>
-                    <p data-i18n="documentsPlaceholder">
-                      Charter, roadmap, risk register, and retrospective
-                    </p>
-                  </div>
-                  <small data-i18n="comingSoon">Coming soon</small>
+                <article class="case-evidence-card" data-state="documented">
+                  <small class="case-state case-state-documented" data-i18n="documentedState">DOCUMENTED</small>
+                  <h5 data-i18n="documentedResultTitle">Delivery evidence</h5>
+                  <p data-i18n="documentedResultText">
+                    Scope, architecture, security risks, planned testing, and release-readiness checks are documented.
+                  </p>
+                </article>
+                <article class="case-evidence-card" data-state="pending">
+                  <small class="case-state case-state-pending" data-i18n="nextState">NEXT</small>
+                  <h5 data-i18n="nextResultTitle">Device and test validation</h5>
+                  <p data-i18n="nextResultText">
+                    Restore automated tests, validate on a physical device, then close PIN-lockout and accessibility gaps.
+                  </p>
                 </article>
               </div>
-            </div>
+            </section>
 
-            <p class="personal-project-note" data-i18n="personalProjectWipNote">
-              Layout preview only — project details and evidence will be added as the work progresses.
-            </p>
+            <section class="case-block case-decisions" aria-labelledby="mms-decisions-title">
+              <div class="case-block-header">
+                <div>
+                  <p class="case-block-code">DELIVERY / DECISIONS</p>
+                  <h4 id="mms-decisions-title" data-i18n="projectDecisionsTitle">
+                    Key product decisions
+                  </h4>
+                </div>
+                <p data-i18n="projectDecisionsIntro">
+                  Three choices that shaped scope, implementation, and the product experience.
+                </p>
+              </div>
+
+              <div class="decision-grid">
+                <article class="decision-card">
+                  <span class="decision-code">DECISION / 01</span>
+                  <h5 data-i18n="localFirstDecisionTitle">Local-first</h5>
+                  <p class="decision-statement" data-i18n="localFirstDecisionText">
+                    Keep moments, access control, and progress data on the device.
+                  </p>
+                  <dl class="decision-register">
+                    <div>
+                      <dt data-i18n="decisionReasonLabel">Reason</dt>
+                      <dd data-i18n="localFirstReason">Removes backend and API dependencies from the prototype.</dd>
+                    </div>
+                    <div>
+                      <dt data-i18n="decisionTradeoffLabel">Trade-off</dt>
+                      <dd data-i18n="localFirstTradeoff">No sync, remote access, or server-side recovery.</dd>
+                    </div>
+                  </dl>
+                </article>
+                <article class="decision-card">
+                  <span class="decision-code">DECISION / 02</span>
+                  <h5 data-i18n="nativeIosDecisionTitle">Native iOS</h5>
+                  <p class="decision-statement" data-i18n="nativeIosDecisionText">
+                    Build one SwiftUI target with Apple-native frameworks and no third-party packages.
+                  </p>
+                  <dl class="decision-register">
+                    <div>
+                      <dt data-i18n="decisionReasonLabel">Reason</dt>
+                      <dd data-i18n="nativeIosReason">Keeps implementation and dependencies compact.</dd>
+                    </div>
+                    <div>
+                      <dt data-i18n="decisionTradeoffLabel">Trade-off</dt>
+                      <dd data-i18n="nativeIosTradeoff">Apple-platform scope; physical-device behaviour remains pending.</dd>
+                    </div>
+                  </dl>
+                </article>
+                <article class="decision-card">
+                  <span class="decision-code">DECISION / 03</span>
+                  <h5 data-i18n="visualProgressDecisionTitle">Visual progression</h5>
+                  <p class="decision-statement" data-i18n="visualProgressDecisionText">
+                    Use a five-stage animated tree to represent progress across check-in days.
+                  </p>
+                  <dl class="decision-register">
+                    <div>
+                      <dt data-i18n="decisionReasonLabel">Reason</dt>
+                      <dd data-i18n="visualProgressReason">Makes continued use visible without relying only on charts.</dd>
+                    </div>
+                    <div>
+                      <dt data-i18n="decisionTradeoffLabel">Trade-off</dt>
+                      <dd data-i18n="visualProgressTradeoff">The metaphor and accessibility still require user validation.</dd>
+                    </div>
+                  </dl>
+                </article>
+              </div>
+            </section>
+
+            <section class="case-disclosures" aria-labelledby="mms-details-title">
+              <div class="case-disclosures-heading">
+                <p class="case-block-code">TECHNICAL / DEEP DIVE</p>
+                <h4 id="mms-details-title" data-i18n="technicalDetailsTitle">Technical details</h4>
+              </div>
+
+              <details class="case-disclosure technical-disclosure">
+                <summary>
+                  <span class="case-disclosure-code">VIEW</span>
+                  <span data-i18n="technicalDetailsSummary">
+                    Architecture, scope, risks, testing and technology
+                  </span>
+                  <span class="case-disclosure-icon" aria-hidden="true">+</span>
+                </summary>
+                <div class="case-disclosure-body">
+                  <div class="technical-detail-grid">
+                    <section class="technical-detail-card technical-detail-card-architecture" aria-labelledby="technical-architecture-title">
+                      <h5 id="technical-architecture-title" data-i18n="technicalArchitectureTitle">
+                        Architecture &amp; local storage
+                      </h5>
+                      <div class="technical-architecture-panel">
+                        <div class="architecture-map">
+                          <section class="architecture-stage architecture-entry" aria-labelledby="technical-user-title">
+                            <span class="architecture-code">ENTRY</span>
+                            <h6 id="technical-user-title" data-i18n="architectureUser">Single local user</h6>
+                            <p data-i18n="architectureUserText">PIN-gated access on one device</p>
+                          </section>
+                          <span class="architecture-arrow" aria-hidden="true">→</span>
+                          <div class="architecture-core">
+                            <section class="architecture-stage architecture-app" aria-labelledby="technical-app-title">
+                              <span class="architecture-code">APPLICATION</span>
+                              <h6 id="technical-app-title" data-i18n="architectureApp">SwiftUI application</h6>
+                              <p data-i18n="architectureAppText">PIN gate · home and tree · check-in · history · settings</p>
+                            </section>
+                            <div class="architecture-store-grid">
+                              <section class="architecture-stage" aria-labelledby="technical-keychain-title">
+                                <span class="architecture-code">ACCESS</span>
+                                <h6 id="technical-keychain-title">Keychain</h6>
+                                <p data-i18n="architectureKeychainText">4-digit UI access PIN</p>
+                              </section>
+                              <section class="architecture-stage" aria-labelledby="technical-swiftdata-title">
+                                <span class="architecture-code">DATA</span>
+                                <h6 id="technical-swiftdata-title">SwiftData</h6>
+                                <p data-i18n="architectureSwiftDataText">Local moment entries</p>
+                              </section>
+                              <section class="architecture-stage" aria-labelledby="technical-defaults-title">
+                                <span class="architecture-code">PROGRESS</span>
+                                <h6 id="technical-defaults-title">UserDefaults</h6>
+                                <p data-i18n="architectureDefaultsText">Tree generation metadata</p>
+                              </section>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="architecture-absence" data-i18n="architectureAbsence">
+                          No backend · No external API · No analytics · No third-party packages
+                        </p>
+                      </div>
+                    </section>
+
+                    <section class="technical-detail-card" aria-labelledby="technical-scope-title">
+                      <h5 id="technical-scope-title" data-i18n="technicalScopeTitle">
+                        Verified scope, testing &amp; validation
+                      </h5>
+                      <ul>
+                        <li data-i18n="technicalScopeOne">PIN, check-in, history, tree, settings and reset implemented</li>
+                        <li data-i18n="technicalScopeTwo">Debug and Release compilation completed</li>
+                        <li data-i18n="technicalScopeThree">Core flow smoke-tested in the iOS simulator</li>
+                        <li data-i18n="technicalScopeFour">Automated tests and physical-device validation remain next</li>
+                      </ul>
+                    </section>
+
+                    <section class="technical-detail-card" aria-labelledby="technical-risks-title">
+                      <h5 id="technical-risks-title" data-i18n="technicalRisksTitle">
+                        Open risks &amp; release readiness
+                      </h5>
+                      <ul>
+                        <li data-i18n="technicalRiskOne">No PIN lockout or cooldown</li>
+                        <li data-i18n="technicalRiskTwo">Accessibility and performance validation remain open</li>
+                        <li data-i18n="technicalRiskThree">Final assets, signing and distribution are pending</li>
+                        <li data-i18n="technicalRiskFour">User impact has not yet been validated</li>
+                      </ul>
+                    </section>
+                  </div>
+
+                  <div class="project-technology-register">
+                    <span data-i18n="projectTechnologyTitle">Full technology register</span>
+                    <div aria-label="Project technologies" data-i18n-aria-label="projectTechnologyLabel">
+                      <span>Swift</span>
+                      <span>SwiftUI</span>
+                      <span>SwiftData</span>
+                      <span>Keychain</span>
+                      <span>UserDefaults</span>
+                      <span>Xcode</span>
+                      <span>Git</span>
+                      <span>Mermaid</span>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </section>
           </article>
         </section>
 

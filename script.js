@@ -39,6 +39,13 @@ document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
   }
 });
 
+document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+  const key = element.dataset.i18nAlt;
+  if (!(key in englishCopy)) {
+    englishCopy[key] = element.getAttribute("alt") || "";
+  }
+});
+
 const germanCopy = {
   accounting: "Rechnungswesen",
   aiReviewTag: "KI-Review",
@@ -197,35 +204,216 @@ const germanCopy = {
   performanceTag: "Performance",
   periodLabel: "Zeitraum",
   phaseTransition: "BERUFLICHE NEUAUSRICHTUNG",
-  personalProjectEvidenceState: "Wird mit dem Projektfortschritt ergänzt",
-  personalProjectFormat: "Durchgängige Fallstudie",
+  personalProjectEvidenceState: "Quellcode · technische Dokumentation · Build-Audit",
+  personalProjectFocusLabel: "Fokus",
+  personalProjectFocusValue: "Delivery-Dokumentation & native iOS-Umsetzung",
+  personalProjectPlatformLabel: "Plattform",
+  personalProjectPlatformValue: "iOS & iPadOS · vollständig lokal",
   personalProjectPlaceholderDescription:
-    "Dieser Bereich dokumentiert ein Projekt von der Problemdefinition über Planung und Umsetzung bis zu Validierung und Release.",
-  personalProjectPlaceholderTitle: "Fallstudie zum persönlichen Projekt",
-  personalProjectRole: "Projektmanagement & Entwicklung",
+    "Ein nativer iOS- und iPadOS-Prototyp, der Check-ins mit vier Fragen in einen lokalen Verlauf und eine visuelle Baum-Journey überführt.",
+  personalProjectPlaceholderTitle: "My Moment Space: Lokales Wohlbefindens-Tagebuch",
   personalProjectsCode: "03 · Persönliches Projekt",
   personalProjectsIntro:
-    "Vorgesehen für eine eigenständige Fallstudie, die Projektmanagement und Softwareentwicklung als durchgängige Delivery-Geschichte zeigt.",
-  personalProjectsTitle: "Ein Projekt. Zwei verbundene Disziplinen.",
-  personalProjectStatus: "In Arbeit",
+    "My Moment Space zeigt, wie Produktdefinition, Delivery-Planung, native iOS-Umsetzung und Validierung zusammenwirken.",
+  personalProjectsTitle: "Ein persönliches Produkt, durchgängig umgesetzt.",
+  personalProjectStatus: "Pre-Release-Prototyp",
   personalProjectWipNote:
-    "Nur Layout-Vorschau - Projektdetails und Nachweise werden mit dem Fortschritt ergänzt.",
-  caseStudyPreview: "VORSCHAU DER FALLSTUDIE",
-  comingSoon: "Folgt in Kürze",
-  devTrackArchitecture: "Architektur & Technologie-Stack",
-  devTrackBuild: "Inkrementelle Entwicklung",
-  devTrackIntro: "Wie die Lösung konzipiert, entwickelt, getestet und veröffentlicht wird.",
-  devTrackTesting: "Tests & Deployment",
-  devTrackTitle: "Entwicklung",
-  documentsPlaceholder: "Projektauftrag, Roadmap, Risikoregister und Retrospektive",
-  documentsTitle: "Projektdokumente",
-  flowDiagramPlaceholder: "Prozess- und Architekturansichten",
-  flowDiagramTitle: "Flussdiagramme",
-  pmTrackCharter: "Projektauftrag & Umfang",
-  pmTrackIntro: "Wie die Arbeit definiert, priorisiert, gesteuert und kommuniziert wird.",
-  pmTrackRisk: "Risiken & Entscheidungen",
-  pmTrackRoadmap: "Roadmap & Meilensteine",
-  pmTrackTitle: "Projektmanagement",
+    "Nachweisgrenze: Quellcode-Umsetzung, Kompilierung und Simulator-Smoke-Test sind abgeschlossen. Automatisierte Tests, Validierung auf einem physischen Gerät, Nutzerwirkung und Distribution sind noch nicht nachgewiesen.",
+  coreStackLabel: "Kerntechnologien des Projekts",
+  projectTypeLabel: "Produkt",
+  projectTypeValue: "Lokales Wohlbefindens-Tagebuch",
+  projectStageLabel: "Phase",
+  projectStageValue: "Pre-Release-Prototyp",
+  productPreviewTitle: "Produktvorschau",
+  productPreviewIntro:
+    "Fünf Simulator-Aufnahmen, die den umgesetzten Produktablauf zeigen.",
+  screenshotSlotLabel: "SCREENSHOT FOLGT",
+  pinScreenshotTitle: "PIN & lokaler Zugriff",
+  pinScreenshotText: "Vierstelliger Zugangsschutz mit Speicherung im Keychain",
+  pinScreenshotAlt:
+    "PIN-Eingabebildschirm von My Moment Space mit numerischer Tastatur",
+  homeScreenshotTitle: "Home & visueller Fortschritt",
+  homeScreenshotText: "Animierter Baum, Zyklusfortschritt und zentrale Aktionen",
+  homeScreenshotAlt:
+    "Home-Bildschirm von My Moment Space mit animiertem smaragdgrünem Baum und Check-in-Optionen",
+  checkinScreenshotTitle: "Check-in mit vier Fragen",
+  checkinScreenshotText: "Eine von vier Stufen zur Wohlbefindensbewertung",
+  checkinScreenshotAlt:
+    "Check-in-Bildschirm von My Moment Space mit vier Auswahlmöglichkeiten zur Wohlbefindensbewertung",
+  saveScreenshotTitle: "Speicherbestätigung",
+  saveScreenshotText: "Klarer Abschlusszustand nach lokaler Speicherung",
+  saveScreenshotAlt:
+    "Bestätigungsbildschirm von My Moment Space, dass der Check-in gespeichert wurde",
+  settingsScreenshotTitle: "Einstellungen & Journey-Steuerung",
+  settingsScreenshotText: "Fortschrittswerte, Baumthemen und Reset-Funktionen",
+  settingsScreenshotAlt:
+    "Einstellungsbildschirm von My Moment Space mit Journey-Statistiken, Baumthemen und Reset-Funktion",
+  historyScreenshotTitle: "Verlauf & Fortschritt",
+  historyScreenshotText: "Tageweise Einträge und Journey-Statistiken",
+  projectOverviewTitle: "Das Wesentliche",
+  projectOverviewIntro:
+    "Problem, mein Beitrag und aktueller Delivery-Stand auf einen Blick.",
+  projectProblemTitle: "Problem",
+  projectProblemText:
+    "Persönliche Reflexion kann zeitaufwendig und abstrakt wirken. Dieser Prototyp untersucht einen kürzeren Check-in mit lokalem Verlauf und visuellem Fortschritt. Die Nutzerwirkung wurde noch nicht validiert.",
+  myContributionTitle: "Mein Beitrag",
+  myContributionText:
+    "Ich habe Produktregeln und Nutzerablauf definiert, Architektur, Risiken, Qualität und Release-Bereitschaft dokumentiert, die SwiftUI-App umgesetzt und den Kernablauf im Simulator per Smoke-Test geprüft.",
+  projectCurrentStatusTitle: "Aktueller Stand",
+  projectCurrentStatusText:
+    "Pre-Release-Prototyp. Quellcode-Umsetzung, Debug- und Release-Kompilierung sowie der Simulator-Smoke-Test sind abgeschlossen. Automatisierte Tests und die Validierung auf einem physischen Gerät stehen aus.",
+  deliveryJourneyTitle: "Von der Definition zur Release-Vorbereitung",
+  deliveryJourneyIntro:
+    "Eine kompakte Übersicht darüber, wie Produktdefinition, technische Delivery und Validierung zusammenwirken.",
+  deliveryJourneyLabel: "Delivery-Journey von My Moment Space",
+  deliveryStepScope: "Umfang definieren",
+  deliveryStepScopeText: "Produktablauf, Grenzen & Regeln",
+  deliveryStepDesign: "Konzipieren",
+  deliveryStepDesignText: "Architektur, Daten & Sicherheit",
+  deliveryStepBuild: "Umsetzen",
+  deliveryStepBuildText: "SwiftUI & lokale Speicherung",
+  deliveryStepValidate: "Validieren",
+  deliveryStepValidateText: "Builds & Simulator-Smoke-Test",
+  deliveryStepPrepare: "Release vorbereiten",
+  deliveryStepPrepareText: "Risiken, Tests & Readiness-Checkliste",
+  deliveryJourneyBoundary:
+    "Die Release-Vorbereitung ist dokumentiert; dies ist kein Produktions-Release.",
+  deliverySnapshotTitle: "Delivery-Ergebnisse",
+  deliverySnapshotIntro:
+    "Vier Fakten, die Recruiter auf einen Blick nachvollziehen können.",
+  builtState: "UMGESETZT",
+  builtResultTitle: "Lokaler Produktablauf",
+  builtResultText:
+    "PIN-Zugriff, Check-in, Verlauf, Baumfortschritt, Einstellungen und Reset sind umgesetzt.",
+  testedState: "GETESTET",
+  testedResultTitle: "Simulator-Validierung",
+  testedResultText:
+    "Debug- und Release-Builds kompilieren; der Kernablauf wurde im iOS-Simulator per Smoke-Test geprüft.",
+  documentedResultTitle: "Delivery-Nachweise",
+  documentedResultText:
+    "Umfang, Architektur, Sicherheitsrisiken, geplante Tests und Release-Readiness-Prüfungen sind dokumentiert.",
+  nextState: "NÄCHSTER SCHRITT",
+  nextResultTitle: "Geräte- und Testvalidierung",
+  nextResultText:
+    "Automatisierte Tests wiederherstellen, auf einem physischen Gerät validieren und anschließend Lücken bei PIN-Sperre und Barrierefreiheit schließen.",
+  projectDecisionsTitle: "Zentrale Produktentscheidungen",
+  projectDecisionsIntro:
+    "Drei Entscheidungen, die Umfang, Umsetzung und Produkterlebnis geprägt haben.",
+  localFirstDecisionTitle: "Local-first",
+  localFirstDecisionText:
+    "Momente, Zugriffskontrolle und Fortschrittsdaten bleiben auf dem Gerät.",
+  decisionReasonLabel: "Grund",
+  localFirstReason:
+    "Entfernt Backend- und API-Abhängigkeiten aus dem Prototyp.",
+  decisionTradeoffLabel: "Abwägung",
+  localFirstTradeoff:
+    "Keine Synchronisierung, kein Fernzugriff und keine serverseitige Wiederherstellung.",
+  nativeIosDecisionTitle: "Native iOS",
+  nativeIosDecisionText:
+    "Ein SwiftUI-Target mit Apple-nativen Frameworks und ohne Drittanbieterpakete.",
+  nativeIosReason: "Hält Umsetzung und Abhängigkeiten kompakt.",
+  nativeIosTradeoff:
+    "Auf Apple-Plattformen begrenzt; das Verhalten auf physischen Geräten ist noch zu prüfen.",
+  visualProgressDecisionTitle: "Visueller Fortschritt",
+  visualProgressDecisionText:
+    "Ein animierter Baum mit fünf Stufen stellt den Fortschritt über Check-in-Tage dar.",
+  visualProgressReason:
+    "Macht kontinuierliche Nutzung sichtbar, ohne sich nur auf Diagramme zu stützen.",
+  visualProgressTradeoff:
+    "Metapher und Barrierefreiheit erfordern noch eine Validierung mit Nutzern.",
+  technicalDetailsTitle: "Technische Details",
+  technicalDetailsSummary: "Architektur, Umfang, Risiken, Tests und Technologie",
+  technicalArchitectureTitle: "Architektur & lokale Speicherung",
+  technicalScopeTitle: "Belegter Umfang, Tests & Validierung",
+  technicalScopeOne: "PIN, Check-in, Verlauf, Baum, Einstellungen und Reset umgesetzt",
+  technicalScopeTwo: "Debug- und Release-Kompilierung abgeschlossen",
+  technicalScopeThree: "Kernablauf im iOS-Simulator per Smoke-Test geprüft",
+  technicalScopeFour:
+    "Automatisierte Tests und Validierung auf einem physischen Gerät folgen",
+  technicalRisksTitle: "Offene Risiken & Release-Bereitschaft",
+  technicalRiskOne: "Keine PIN-Sperre oder Wartezeit",
+  technicalRiskTwo: "Barrierefreiheits- und Performance-Validierung stehen aus",
+  technicalRiskThree: "Finale Assets, Signing und Distribution stehen aus",
+  technicalRiskFour: "Die Nutzerwirkung wurde noch nicht validiert",
+  architectureAbsence: "Kein Backend · Keine externe API · Kein Analytics · Keine Drittanbieterpakete",
+  architectureApp: "SwiftUI-Anwendung",
+  architectureAppText: "PIN-Sperre · Home und Baum · Check-in · Verlauf · Einstellungen",
+  architectureDefaultsText: "Metadaten der Baumgeneration",
+  architectureKeychainText: "Vierstellige PIN für den UI-Zugriff",
+  architectureSwiftDataText: "Lokale Moment-Einträge",
+  architectureText:
+    "Eine native Struktur für ein einzelnes Gerät hält Oberfläche, Produktzustand und Speicherung innerhalb der App – ohne Backend, externe API oder Analytics.",
+  architectureTitle: "Local-First-Architektur",
+  architectureUser: "Einzelner lokaler Nutzer",
+  architectureUserText: "PIN-geschützter Zugriff auf einem Gerät",
+  buildEvidenceText:
+    "Debug- und Release-Builds kompilieren; der Kernablauf wurde im iOS-Simulator per Smoke-Test geprüft.",
+  buildEvidenceTitle: "Simulator-Validierung",
+  caseDetailsTitle: "Details zur Fallstudie",
+  caseEvidenceIntro:
+    "Eine kompakte Übersicht darüber, was umgesetzt, validiert, dokumentiert oder noch ausstehend ist.",
+  caseEvidenceTitle: "Nachweise und Reifegrad",
+  caseStudyPreview: "QUELLENGESTÜTZTE FALLSTUDIE",
+  deliveryEvidenceFour: "Geplante Teststrategie und manuelle Release-Checkliste vorbereitet",
+  deliveryEvidenceOne: "Funktionaler Umfang und technische Leitplanken dokumentiert",
+  deliveryEvidenceThree: "Sicherheitsrisiken, Maßnahmen und technische Schulden festgehalten",
+  deliveryEvidenceTitle: "Delivery-Nachweise",
+  deliveryEvidenceTwo: "Durchgängiger Nutzerablauf und Modulverantwortung abgebildet",
+  devTrackArchitecture: "SwiftUI-Architektur mit einem Target",
+  devTrackBuild: "SwiftData, Keychain & UserDefaults",
+  devTrackIntro:
+    "Eine SwiftUI-App mit einem Target bildet den lokalen Produktablauf mit SwiftData, Keychain und UserDefaults ab – ohne Backend oder Drittanbieterpakete.",
+  devTrackTesting: "Check-in-, Verlaufs-, Baum- & Reset-Abläufe",
+  devTrackTitle: "Native iOS-Umsetzung",
+  devTrackValidation: "Nachweise für Debug- & Release-Kompilierung",
+  documentedState: "DOKUMENTIERT",
+  documentationEvidenceText:
+    "Dokumentation zu Architektur, Daten, Sicherheit, Feature-Abläufen, geplanter Teststrategie und Release-Bereitschaft ist vorhanden.",
+  documentationEvidenceTitle: "Delivery-Dokumentation",
+  featureScopeFive: "Siebentägiger Generationsfortschritt, Statistiken und Journey-Reset",
+  featureScopeFour: "Animierter Baum mit fünf Stufen und vier visuellen Themen",
+  featureScopeOne: "PIN-Einrichtung, Entsperren und automatische erneute Sperre",
+  featureScopeThree: "Tageweise gruppierter Verlauf und visuelle Gesamtbewertungen",
+  featureScopeTitle: "Belegter Funktionsumfang",
+  featureScopeTwo: "Wohlbefindens-Check-in aus vier Fragen mit lokaler Speicherung",
+  generationDays: "Unterschiedliche Tage pro Generation",
+  implementedState: "UMGESETZT",
+  nextMilestoneText:
+    "Automatisierte Tests wiederherstellen, die Validierung auf einem physischen Gerät abschließen und anschließend prioritäre Lücken bei PIN-Sperre und Barrierefreiheit vor der Release-Validierung schließen. Ein verbindlicher Termin ist nicht belegt.",
+  nextMilestoneTitle: "Empfohlener nächster Meilenstein",
+  openRiskFour: "Validierung auf einem physischen Gerät, finale Assets, Signing, Distribution und Nachweise zur Nutzerwirkung fehlen",
+  openRiskOne: "Automatisiertes Test-Target und Testquellen sind derzeit nicht verfügbar",
+  openRiskThree: "Validierungen zu Barrierefreiheit, Sicherheit und Performance stehen aus",
+  openRiskTwo: "Für die vierstellige PIN gibt es keine Sperre oder Wartezeit",
+  openRisksTitle: "Offene Risiken und Einschränkungen",
+  pendingState: "AUSSTEHEND",
+  pmTrackCharter: "Umfang & funktionale Leitplanken",
+  pmTrackFlow: "Nutzerablauf- & Architekturdokumentation",
+  pmTrackIntro:
+    "Die Repository-Dokumentation macht Umfang, funktionale Leitplanken, Risiken, Qualitätsplanung und Prüfungen zur Release-Bereitschaft nachvollziehbar.",
+  pmTrackRisk: "Sicherheitsrisiken & technische Entscheidungen",
+  pmTrackRoadmap: "Qualitätsplan & Release-Checkliste",
+  pmTrackTitle: "Delivery-Planung & Nachweise",
+  productFramingText:
+    "Das Produkt untersucht, ob vier strukturierte Bewertungen, ein lokaler Verlauf und eine visuelle Wachstumsmetapher persönliche Check-ins leichter beibehalten lassen. Dies ist eine Produkthypothese und keine validierte Nutzerforschung.",
+  productFramingTitle: "Ein kurzer Moment zur Reflexion.",
+  projectFlowBoundary:
+    "Im Quellcode umgesetzt und im Simulator per Smoke-Test geprüft; die Prüfung auf einem physischen Gerät steht noch aus.",
+  projectLifecycleIntro:
+    "Der Quellcode bildet eine lokale Journey vom PIN-geschützten Zugriff über Reflexion und Verlauf bis zum visuellen Fortschritt ab.",
+  projectRulesLabel: "Implementierte Produktregeln",
+  projectTechnologyLabel: "Projekttechnologien",
+  projectTechnologyTitle: "Vollständige Technologieübersicht",
+  projectTracksTitle: "Verbundene Delivery- und Entwicklungsstränge",
+  ratingDimensions: "Bewertungsdimensionen",
+  sourceEvidenceText:
+    "PIN-Zugriff, Check-in, Verlauf, Baumfortschritt, Einstellungen und Reset sind im Quellcode umgesetzt.",
+  sourceEvidenceTitle: "Umgesetzter Produktablauf",
+  treeStages: "Wachstumsstufen des Baums",
+  treeThemes: "Visuelle Baumthemen",
+  validationLabel: "Validierung",
+  validatedState: "VALIDIERT",
+  validationValue: "Simulator-Smoke-Test abgeschlossen · physisches Gerät ausstehend",
   principleAlignText:
     "Stakeholder-Anforderungen in User Stories, technische Spezifikationen, Meilensteine und klare Maßnahmen übersetzen.",
   principleAlignTitle: "Ausrichten",
@@ -238,12 +426,9 @@ const germanCopy = {
   professionalUse: "Im Lebenslauf angegeben",
   projectDelivery: "Projektsteuerung",
   projectEvidenceTagsLabel: "Nachweise zur Projektsteuerung",
-  projectEvidencePreviewTitle: "Vorgesehene Nachweisbereiche",
-  projectFormatLabel: "Format",
-  projectLifecycleLabel: "Geplanter Ablauf des persönlichen Projekts",
-  projectLifecycleTitle: "Geplanter Delivery-Ablauf",
+  projectLifecycleLabel: "Implementierter Produktablauf von My Moment Space",
+  projectLifecycleTitle: "Implementierter Produktablauf",
   projectManagement: "Projektmanagement",
-  projectTracksLabel: "Zwei verbundene Delivery-Arbeitsströme",
   puneUniversity: "Pune University, Indien",
   qualityPackageTitle: "Engineering-Qualitätssicherung",
   railRole: "Projekte · Delivery · Technologie",
@@ -260,18 +445,18 @@ const germanCopy = {
   sectionNavLabel: "Portfolio-Bereiche",
   skipLink: "Zum Hauptinhalt springen",
   snapshotLabel: "Projektübersicht zur Karriere",
-  screenshotsPlaceholder: "Produktansichten mit Kontext",
-  screenshotsTitle: "Screenshots",
-  stageBuild: "Entwickeln",
-  stageBuildText: "Inkrementelle Umsetzung",
-  stageDiscover: "Verstehen",
-  stageDiscoverText: "Problem & Nutzer",
-  stagePlan: "Planen",
-  stagePlanText: "Umfang, Roadmap & Risiken",
-  stageRelease: "Veröffentlichen",
-  stageReleaseText: "Deployment & Retrospektive",
-  stageValidate: "Validieren",
-  stageValidateText: "Tests & Feedback",
+  screenshotsPlaceholder: "Simulator-Aufnahmen mit synthetischen Daten werden für die sichere Veröffentlichung noch benötigt.",
+  screenshotsTitle: "Produkt-Screenshots",
+  stageBuild: "Lokal speichern",
+  stageBuildText: "Moment mit SwiftData speichern",
+  stageDiscover: "Entsperren",
+  stageDiscoverText: "Vierstellige PIN erstellen oder eingeben",
+  stagePlan: "Einchecken",
+  stagePlanText: "Vier Dimensionen von 1–4 bewerten",
+  stageRelease: "Wachsen",
+  stageReleaseText: "Die visuelle Baum-Journey fortsetzen",
+  stageValidate: "Zurückblicken",
+  stageValidateText: "Momente tageweise gruppiert ansehen",
   stakeholdersTag: "Stakeholder",
   startConversation: "Gespräch starten",
   statusValue: "Offen für Projekt- & Delivery-Rollen",
@@ -399,6 +584,11 @@ function applyLanguage(language, shouldAnnounce = false) {
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
     const copy = getCopy(element.dataset.i18nAriaLabel, currentLanguage);
     if (copy) element.setAttribute("aria-label", copy);
+  });
+
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    const copy = getCopy(element.dataset.i18nAlt, currentLanguage);
+    if (copy) element.setAttribute("alt", copy);
   });
 
   languageButtons.forEach((button) => {
