@@ -784,6 +784,72 @@ ol {
   font-weight: 750;
 }
 
+.snapshot-profile {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  align-items: center;
+  border-bottom: 1px solid var(--line-dark);
+  padding: 22px 25px;
+  gap: 20px;
+}
+
+.snapshot-portrait {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  margin: 0;
+  background: var(--panel-raised);
+}
+
+.snapshot-portrait::after {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 14px;
+  height: 14px;
+  border-right: 1px solid var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+  content: "";
+}
+
+.snapshot-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+}
+
+.snapshot-identity {
+  display: grid;
+  min-width: 0;
+}
+
+.snapshot-identity small {
+  margin-bottom: 7px;
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  font-weight: 750;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.snapshot-identity strong {
+  margin-bottom: 5px;
+  font-size: 1.08rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.snapshot-identity span {
+  color: var(--text-inverse-muted);
+  font-size: 0.7rem;
+  line-height: 1.45;
+}
+
 .project-snapshot dl {
   margin-bottom: 0;
   padding: 4px 25px;
@@ -2468,6 +2534,16 @@ ol {
 
   .project-snapshot dl > div {
     grid-template-columns: 90px minmax(0, 1fr);
+  }
+
+  .snapshot-profile {
+    grid-template-columns: 92px minmax(0, 1fr);
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .snapshot-identity strong {
+    font-size: 0.96rem;
   }
 
   .metric-grid {
